@@ -1,0 +1,854 @@
+# Internationalization (i18n) - UI Strings and Common Labels
+# Format: key: { en: "English", es: "Spanish", etc. }
+
+en:
+  # Navigation
+  nav:
+    home: "Home"
+    risks: "The Risks"
+    what_to_do: "What To Do"
+    full_report: "Full Report"
+    language: "Language"
+
+  # Header
+  header:
+    title: "CBP Home Warning"
+    subtitle: "Privacy Analysis"
+    skip_to_content: "Skip to main content"
+
+  # Hero Section
+  hero:
+    warning_badge: "About This App"
+    app_name: "CBP Home"
+    app_location: "Available on Google Play and iOS App Store"
+    critical_warning: "Critical Privacy Warning"
+    main_message: "This application is collecting intimate details about your location, identity, and behavior through comprehensive surveillance capabilities. This analysis explains what's being collected and why it matters."
+
+  # CTA Buttons
+  buttons:
+    understand_risks: "Understand the Risks"
+    download_report: "Download Full Report"
+    view_recommendations: "View Recommendations →"
+
+  # Sections
+  sections:
+    whats_happening: "What's Happening in Plain English"
+    why_care: "Why Should You Care?"
+    tech_details: "Technical Details (For Security Professionals)"
+    what_you_can_do: "What Can You Do?"
+    key_findings: "Key Findings at a Glance"
+    more_information: "More Information"
+
+  # Card Titles
+  cards:
+    location: "Your Location is Always Known"
+    identity: "Your Identity is Recorded"
+    relationships: "Your Relationships Are Monitored"
+    control: "Your Behavior Can Be Controlled"
+    rights: "Your Fundamental Rights"
+    vulnerable: "Risk to Vulnerable People"
+    misuse: "Potential for Misuse"
+
+  # Descriptions
+  descriptions:
+    location_desc: "The app continuously tracks where you are, where you've been, and where you go. This isn't for your benefit—it's for surveillance."
+    identity_desc: "Facial recognition and biometric data are being collected and stored. This creates a permanent digital record of who you are."
+    relationships_desc: "Access to your contacts and communication patterns reveals who you know and who you associate with."
+    control_desc: "Remote monitoring and control capabilities mean your device can be used to influence your actions and decisions."
+    rights_desc: "Privacy is a fundamental human right. Surveillance on this scale violates that right and enables potential abuse."
+    vulnerable_desc: "Domestic abuse survivors, refugees, activists, and journalists are at heightened risk from this level of surveillance."
+    misuse_desc: "Today's surveillance tool is tomorrow's tool for political persecution, blackmail, or oppression."
+
+  # Footer
+  footer:
+    navigation: "Navigation"
+    technical: "Technical"
+    about: "About"
+    copyright: "Educational analysis for public awareness."
+    about_text: "This is an independent security analysis created for public awareness. We believe everyone deserves to understand the surveillance tools being used."
+
+  # Related Links
+  related:
+    the_risks: "The Risks"
+    understand_dangers: "Understand the surveillance dangers"
+    what_to_do: "What To Do"
+    protect_privacy: "Steps to protect your privacy"
+    technical_analysis: "Technical Analysis"
+    deep_dive: "Deep dive into our findings"
+
+  # Alerts
+  alerts:
+    critical: "Critical Vulnerabilities"
+    warning: "Important Notice"
+    info: "About This Analysis"
+
+  # Quick Facts
+  quick_facts:
+    major_categories: "Major Risk Categories"
+    continuous_tracking: "Continuous Tracking"
+    data_retained: "Data Retained"
+    misuse_potential: "Future Misuse Potential"
+
+  # Language Selector
+  language_selector:
+    select_language: "Select Language"
+    choose_language: "Choose your language"
+    current_language: "Current: {lang}"
+    auto_detect: "Auto-detect"
+    auto_detected: "Auto-detected"
+
+es:
+  nav:
+    home: "Inicio"
+    risks: "Los Riesgos"
+    what_to_do: "Qué Hacer"
+    full_report: "Informe Completo"
+    language: "Idioma"
+
+  header:
+    title: "Advertencia CBP Home"
+    subtitle: "Análisis de Privacidad"
+    skip_to_content: "Ir al contenido principal"
+
+  hero:
+    warning_badge: "Acerca de esta Aplicación"
+    app_name: "CBP Home"
+    app_location: "Disponible en Google Play y App Store de iOS"
+    critical_warning: "Advertencia Crítica de Privacidad"
+    main_message: "Esta aplicación está recopilando detalles íntimos sobre su ubicación, identidad y comportamiento a través de capacidades de vigilancia integral. Este análisis explica qué se está recopilando y por qué importa."
+
+  buttons:
+    understand_risks: "Entender los Riesgos"
+    download_report: "Descargar Informe Completo"
+    view_recommendations: "Ver Recomendaciones →"
+
+  sections:
+    whats_happening: "Qué Está Pasando en Lenguaje Sencillo"
+    why_care: "¿Por Qué Debería Importarle?"
+    tech_details: "Detalles Técnicos (Para Profesionales de Seguridad)"
+    what_you_can_do: "¿Qué Puede Hacer?"
+    key_findings: "Hallazgos Clave de un Vistazo"
+    more_information: "Más Información"
+
+  cards:
+    location: "Su Ubicación Siempre es Conocida"
+    identity: "Su Identidad es Registrada"
+    relationships: "Sus Relaciones son Monitoreadas"
+    control: "Su Comportamiento Puede ser Controlado"
+    rights: "Sus Derechos Fundamentales"
+    vulnerable: "Riesgo para Personas Vulnerables"
+    misuse: "Potencial de Abuso"
+
+  descriptions:
+    location_desc: "La aplicación rastreará continuamente dónde está, dónde ha estado y adónde va. Esto no es para su beneficio, es para vigilancia."
+    identity_desc: "Los datos de reconocimiento facial y biométricos se están recopilando y almacenando. Esto crea un registro digital permanente de quién es usted."
+    relationships_desc: "El acceso a sus contactos y patrones de comunicación revela quién conoce y con quién se asocia."
+    control_desc: "Las capacidades de monitoreo remoto y control significan que su dispositivo puede ser utilizado para influir en sus acciones y decisiones."
+    rights_desc: "La privacidad es un derecho humano fundamental. La vigilancia a esta escala viola ese derecho y permite posibles abusos."
+    vulnerable_desc: "Las víctimas de abuso doméstico, refugiados, activistas y periodistas corren un riesgo mayor por este nivel de vigilancia."
+    misuse_desc: "La herramienta de vigilancia de hoy es la herramienta de persecución política, chantaje u opresión de mañana."
+
+  footer:
+    navigation: "Navegación"
+    technical: "Técnico"
+    about: "Acerca de"
+    copyright: "Análisis educativo para conciencia pública."
+    about_text: "Este es un análisis de seguridad independiente creado para conciencia pública. Creemos que todos merecen entender las herramientas de vigilancia que se utilizan."
+
+  related:
+    the_risks: "Los Riesgos"
+    understand_dangers: "Comprender los peligros de vigilancia"
+    what_to_do: "Qué Hacer"
+    protect_privacy: "Pasos para proteger su privacidad"
+    technical_analysis: "Análisis Técnico"
+    deep_dive: "Análisis profundo de nuestros hallazgos"
+
+  alerts:
+    critical: "Vulnerabilidades Críticas"
+    warning: "Aviso Importante"
+    info: "Acerca de Este Análisis"
+
+  quick_facts:
+    major_categories: "Categorías Principales de Riesgo"
+    continuous_tracking: "Rastreo Continuo"
+    data_retained: "Datos Retenidos"
+    misuse_potential: "Potencial de Abuso Futuro"
+
+  language_selector:
+    select_language: "Seleccionar Idioma"
+    choose_language: "Elige tu idioma"
+    current_language: "Actual: {lang}"
+    auto_detect: "Detección Automática"
+    auto_detected: "Detectado Automáticamente"
+
+fr:
+  nav:
+    home: "Accueil"
+    risks: "Les Risques"
+    what_to_do: "Que Faire"
+    full_report: "Rapport Complet"
+    language: "Langue"
+
+  header:
+    title: "Avertissement CBP Home"
+    subtitle: "Analyse de Confidentialité"
+    skip_to_content: "Aller au contenu principal"
+
+  hero:
+    warning_badge: "À Propos de Cette Application"
+    app_name: "CBP Home"
+    app_location: "Disponible sur Google Play et l'App Store iOS"
+    critical_warning: "Avertissement Critique de Confidentialité"
+    main_message: "Cette application collecte des détails intimes sur votre localisation, votre identité et votre comportement par le biais de capacités de surveillance complètes. Cette analyse explique ce qui est collecté et pourquoi cela importe."
+
+  buttons:
+    understand_risks: "Comprendre les Risques"
+    download_report: "Télécharger le Rapport Complet"
+    view_recommendations: "Voir les Recommandations →"
+
+  sections:
+    whats_happening: "Ce Qui Se Passe en Langage Simple"
+    why_care: "Pourquoi Devriez-Vous Vous en Soucier ?"
+    tech_details: "Détails Techniques (Pour les Professionnels de la Sécurité)"
+    what_you_can_do: "Que Pouvez-Vous Faire ?"
+    key_findings: "Conclusions Clés en Un Coup d'Œil"
+    more_information: "Plus d'Informations"
+
+  cards:
+    location: "Votre Localisation est Toujours Connue"
+    identity: "Votre Identité est Enregistrée"
+    relationships: "Vos Relations Sont Surveillées"
+    control: "Votre Comportement Peut Être Contrôlé"
+    rights: "Vos Droits Fondamentaux"
+    vulnerable: "Risque pour les Personnes Vulnérables"
+    misuse: "Potentiel d'Abus"
+
+  descriptions:
+    location_desc: "L'application suit continuellement où vous êtes, où vous avez été et où vous allez. Ce n'est pas pour votre bénéfice, c'est pour la surveillance."
+    identity_desc: "Les données de reconnaissance faciale et biométriques sont collectées et stockées. Cela crée un enregistrement numérique permanent de qui vous êtes."
+    relationships_desc: "L'accès à vos contacts et vos modèles de communication révèle qui vous connaissez et avec qui vous vous associez."
+    control_desc: "Les capacités de surveillance et de contrôle à distance signifient que votre appareil peut être utilisé pour influencer vos actions et vos décisions."
+    rights_desc: "La vie privée est un droit humain fondamental. La surveillance à cette échelle viole ce droit et permet des abus potentiels."
+    vulnerable_desc: "Les survivants de violence domestique, les réfugiés, les militants et les journalistes courent un risque accru face à ce niveau de surveillance."
+    misuse_desc: "L'outil de surveillance d'aujourd'hui est l'outil de persécution politique, de chantage ou d'oppression de demain."
+
+  footer:
+    navigation: "Navigation"
+    technical: "Technique"
+    about: "À Propos"
+    copyright: "Analyse éducative pour la sensibilisation du public."
+    about_text: "Ceci est une analyse de sécurité indépendante créée pour la sensibilisation du public. Nous croyons que chacun mérite de comprendre les outils de surveillance utilisés."
+
+  related:
+    the_risks: "Les Risques"
+    understand_dangers: "Comprendre les dangers de la surveillance"
+    what_to_do: "Que Faire"
+    protect_privacy: "Étapes pour protéger votre vie privée"
+    technical_analysis: "Analyse Technique"
+    deep_dive: "Analyse approfondie de nos conclusions"
+
+  alerts:
+    critical: "Vulnérabilités Critiques"
+    warning: "Avis Important"
+    info: "À Propos de Cette Analyse"
+
+  quick_facts:
+    major_categories: "Principales Catégories de Risques"
+    continuous_tracking: "Suivi Continu"
+    data_retained: "Données Conservées"
+    misuse_potential: "Potentiel d'Abus Futur"
+
+  language_selector:
+    select_language: "Sélectionner la Langue"
+    choose_language: "Choisissez votre langue"
+    current_language: "Actuel: {lang}"
+    auto_detect: "Détection Automatique"
+    auto_detected: "Détecté Automatiquement"
+
+de:
+  nav:
+    home: "Startseite"
+    risks: "Die Risiken"
+    what_to_do: "Was Sie Tun Können"
+    full_report: "Vollständiger Bericht"
+    language: "Sprache"
+
+  header:
+    title: "CBP Home Warnung"
+    subtitle: "Datenschutzanalyse"
+    skip_to_content: "Zum Hauptinhalt springen"
+
+  hero:
+    warning_badge: "Über diese Anwendung"
+    app_name: "CBP Home"
+    app_location: "Verfügbar auf Google Play und iOS App Store"
+    critical_warning: "Kritische Datenschutzwarnung"
+    main_message: "Diese Anwendung sammelt intime Details über Ihren Standort, Ihre Identität und Ihr Verhalten durch umfangreiche Überwachungsfunktionen. Diese Analyse erklärt, was gesammelt wird und warum es wichtig ist."
+
+  buttons:
+    understand_risks: "Die Risiken Verstehen"
+    download_report: "Vollständigen Bericht Herunterladen"
+    view_recommendations: "Empfehlungen Anzeigen →"
+
+  sections:
+    whats_happening: "Was in Einfacher Sprache Passiert"
+    why_care: "Warum Sollte es Sie Interessieren?"
+    tech_details: "Technische Details (für Sicherheitsexperten)"
+    what_you_can_do: "Was Können Sie Tun?"
+    key_findings: "Wichtigste Erkenntnisse auf einen Blick"
+    more_information: "Weitere Informationen"
+
+  cards:
+    location: "Ihr Standort ist Immer Bekannt"
+    identity: "Ihre Identität wird Aufgezeichnet"
+    relationships: "Ihre Beziehungen Werden Überwacht"
+    control: "Ihr Verhalten Kann Kontrolliert Werden"
+    rights: "Ihre Grundrechte"
+    vulnerable: "Risiko für Vulnerable Menschen"
+    misuse: "Potenzial für Missbrauch"
+
+  descriptions:
+    location_desc: "Die App verfolgt kontinuierlich, wo Sie sind, wo Sie waren und wohin Sie gehen. Dies ist nicht zu Ihrem Vorteil – es ist Überwachung."
+    identity_desc: "Gesichtserkennungs- und biometrische Daten werden erfasst und gespeichert. Dies erstellt einen permanenten digitalen Datensatz über Ihre Identität."
+    relationships_desc: "Der Zugriff auf Ihre Kontakte und Kommunikationsmuster zeigt, wen Sie kennen und mit wem Sie sich verbinden."
+    control_desc: "Remote-Überwachungs- und Kontrollfunktionen bedeuten, dass Ihr Gerät zur Beeinflussung Ihrer Handlungen und Entscheidungen verwendet werden kann."
+    rights_desc: "Datenschutz ist ein grundlegendes Menschenrecht. Überwachung in diesem Ausmaß verstößt gegen dieses Recht und ermöglicht potenzielle Missbrauch."
+    vulnerable_desc: "Opfer von häuslicher Gewalt, Flüchtlinge, Aktivisten und Journalisten sind diesem Überwachungsniveau besonders gefährdet."
+    misuse_desc: "Das Überwachungsinstrument von heute ist das Instrument der politischen Verfolgung, Erpressung oder Unterdrückung von morgen."
+
+  footer:
+    navigation: "Navigation"
+    technical: "Technisch"
+    about: "Über"
+    copyright: "Bildungsanalyse für öffentliches Bewusstsein."
+    about_text: "Dies ist eine unabhängige Sicherheitsanalyse für öffentliches Bewusstsein. Wir glauben, dass jeder verstehen sollte, welche Überwachungsinstrumente verwendet werden."
+
+  related:
+    the_risks: "Die Risiken"
+    understand_dangers: "Verstehen Sie die Überwachungsgefahren"
+    what_to_do: "Was Sie Tun Können"
+    protect_privacy: "Schritte zum Schutz Ihrer Privatsphäre"
+    technical_analysis: "Technische Analyse"
+    deep_dive: "Tiefgehende Analyse unserer Erkenntnisse"
+
+  alerts:
+    critical: "Kritische Sicherheitslücken"
+    warning: "Wichtige Mitteilung"
+    info: "Über Diese Analyse"
+
+  quick_facts:
+    major_categories: "Hauptrisikokategorien"
+    continuous_tracking: "Kontinuierliche Verfolgung"
+    data_retained: "Behaltene Daten"
+    misuse_potential: "Potenzial für zukünftigen Missbrauch"
+
+  language_selector:
+    select_language: "Sprache Auswählen"
+    choose_language: "Wählen Sie Ihre Sprache"
+    current_language: "Aktuell: {lang}"
+    auto_detect: "Automatische Erkennung"
+    auto_detected: "Automatisch Erkannt"
+
+pt:
+  nav:
+    home: "Início"
+    risks: "Os Riscos"
+    what_to_do: "O Que Fazer"
+    full_report: "Relatório Completo"
+    language: "Idioma"
+
+  header:
+    title: "Aviso CBP Home"
+    subtitle: "Análise de Privacidade"
+    skip_to_content: "Pular para conteúdo principal"
+
+  hero:
+    warning_badge: "Sobre Este Aplicativo"
+    app_name: "CBP Home"
+    app_location: "Disponível no Google Play e App Store do iOS"
+    critical_warning: "Aviso Crítico de Privacidade"
+    main_message: "Este aplicativo está coletando detalhes íntimos sobre sua localização, identidade e comportamento através de recursos abrangentes de vigilância. Esta análise explica o que está sendo coletado e por que importa."
+
+  buttons:
+    understand_risks: "Entender os Riscos"
+    download_report: "Baixar Relatório Completo"
+    view_recommendations: "Ver Recomendações →"
+
+  sections:
+    whats_happening: "O Que Está Acontecendo em Linguagem Simples"
+    why_care: "Por Que Você Deveria Se Importar?"
+    tech_details: "Detalhes Técnicos (Para Profissionais de Segurança)"
+    what_you_can_do: "O Que Você Pode Fazer?"
+    key_findings: "Descobertas Principais em Um Relance"
+    more_information: "Mais Informações"
+
+  cards:
+    location: "Sua Localização Sempre é Conhecida"
+    identity: "Sua Identidade é Registrada"
+    relationships: "Seus Relacionamentos São Monitorados"
+    control: "Seu Comportamento Pode Ser Controlado"
+    rights: "Seus Direitos Fundamentais"
+    vulnerable: "Risco para Pessoas Vulneráveis"
+    misuse: "Potencial para Abuso"
+
+  descriptions:
+    location_desc: "O aplicativo rastreia continuamente onde você está, onde esteve e para onde vai. Isso não é para seu benefício – é vigilância."
+    identity_desc: "Dados de reconhecimento facial e biométricos estão sendo coletados e armazenados. Isso cria um registro digital permanente de quem você é."
+    relationships_desc: "O acesso aos seus contatos e padrões de comunicação revela quem você conhece e com quem se associa."
+    control_desc: "Os recursos de monitoramento e controle remoto significam que seu dispositivo pode ser usado para influenciar suas ações e decisões."
+    rights_desc: "Privacidade é um direito humano fundamental. A vigilância nesta escala viola esse direito e permite possíveis abusos."
+    vulnerable_desc: "Vítimas de violência doméstica, refugiados, ativistas e jornalistas correm risco aumentado com este nível de vigilância."
+    misuse_desc: "A ferramenta de vigilância de hoje é a ferramenta de perseguição política, chantagem ou opressão de amanhã."
+
+  footer:
+    navigation: "Navegação"
+    technical: "Técnico"
+    about: "Sobre"
+    copyright: "Análise educacional para conscientização pública."
+    about_text: "Esta é uma análise de segurança independente criada para conscientização pública. Acreditamos que todos merecem entender as ferramentas de vigilância sendo usadas."
+
+  related:
+    the_risks: "Os Riscos"
+    understand_dangers: "Entender os perigos da vigilância"
+    what_to_do: "O Que Fazer"
+    protect_privacy: "Etapas para proteger sua privacidade"
+    technical_analysis: "Análise Técnica"
+    deep_dive: "Análise profunda de nossas descobertas"
+
+  alerts:
+    critical: "Vulnerabilidades Críticas"
+    warning: "Aviso Importante"
+    info: "Sobre Esta Análise"
+
+  quick_facts:
+    major_categories: "Principais Categorias de Risco"
+    continuous_tracking: "Rastreamento Contínuo"
+    data_retained: "Dados Retidos"
+    misuse_potential: "Potencial para Abuso Futuro"
+
+  language_selector:
+    select_language: "Selecionar Idioma"
+    choose_language: "Escolha seu idioma"
+    current_language: "Atual: {lang}"
+    auto_detect: "Detecção Automática"
+    auto_detected: "Detectado Automaticamente"
+
+zh:
+  nav:
+    home: "首页"
+    risks: "风险"
+    what_to_do: "应该怎么做"
+    full_report: "完整报告"
+    language: "语言"
+
+  header:
+    title: "CBP Home 警告"
+    subtitle: "隐私分析"
+    skip_to_content: "跳到主要内容"
+
+  hero:
+    warning_badge: "关于此应用"
+    app_name: "CBP Home"
+    app_location: "可在 Google Play 和 iOS App Store 上获得"
+    critical_warning: "关键隐私警告"
+    main_message: "此应用程序通过全面的监视功能收集有关您位置、身份和行为的亲密细节。本分析解释了正在收集的内容以及为什么这很重要。"
+
+  buttons:
+    understand_risks: "了解风险"
+    download_report: "下载完整报告"
+    view_recommendations: "查看建议 →"
+
+  sections:
+    whats_happening: "用简单英语发生的情况"
+    why_care: "你为什么应该关心?"
+    tech_details: "技术详情(供安全专业人士)"
+    what_you_can_do: "你能做什么?"
+    key_findings: "一目了然的关键发现"
+    more_information: "更多信息"
+
+  cards:
+    location: "你的位置总是已知的"
+    identity: "你的身份被记录"
+    relationships: "你的关系被监控"
+    control: "你的行为可以被控制"
+    rights: "你的基本权利"
+    vulnerable: "易受伤害的人的风险"
+    misuse: "滥用的可能性"
+
+  descriptions:
+    location_desc: "该应用持续跟踪您在哪里、您去过哪里以及您要去哪里。这不是为了您的利益，而是为了监视。"
+    identity_desc: "面部识别和生物特征数据正在被收集和存储。这创建了您身份的永久数字记录。"
+    relationships_desc: "访问您的联系人和通信模式会显示您认识谁以及与谁有关联。"
+    control_desc: "远程监控和控制功能意味着您的设备可能被用来影响您的行为和决定。"
+    rights_desc: "隐私是一项基本人权。这种规模的监视侵犯了这项权利，并促成了潜在的滥用。"
+    vulnerable_desc: "家庭暴力幸存者、难民、活动人士和记者面临这种程度的监视所带来的更高风险。"
+    misuse_desc: "今天的监视工具是明天的政治迫害、敲诈或压迫工具。"
+
+  footer:
+    navigation: "导航"
+    technical: "技术"
+    about: "关于"
+    copyright: "公众意识的教育分析。"
+    about_text: "这是为公众意识而创建的独立安全分析。我们相信每个人都应该了解正在使用的监视工具。"
+
+  related:
+    the_risks: "风险"
+    understand_dangers: "了解监视危险"
+    what_to_do: "应该怎么做"
+    protect_privacy: "保护隐私的步骤"
+    technical_analysis: "技术分析"
+    deep_dive: "深入分析我们的发现"
+
+  alerts:
+    critical: "严重漏洞"
+    warning: "重要通知"
+    info: "关于本分析"
+
+  quick_facts:
+    major_categories: "主要风险类别"
+    continuous_tracking: "持续跟踪"
+    data_retained: "保留的数据"
+    misuse_potential: "未来滥用的可能性"
+
+  language_selector:
+    select_language: "选择语言"
+    choose_language: "选择您的语言"
+    current_language: "当前: {lang}"
+    auto_detect: "自动检测"
+    auto_detected: "自动检测"
+
+ja:
+  nav:
+    home: "ホーム"
+    risks: "リスク"
+    what_to_do: "何をすべきか"
+    full_report: "完全なレポート"
+    language: "言語"
+
+  header:
+    title: "CBPホーム警告"
+    subtitle: "プライバシー分析"
+    skip_to_content: "メインコンテンツにスキップ"
+
+  hero:
+    warning_badge: "このアプリについて"
+    app_name: "CBP Home"
+    app_location: "GooglePlayとiOSAppStoreで利用可能"
+    critical_warning: "重大なプライバシー警告"
+    main_message: "このアプリケーションは、包括的な監視機能を通じて、あなたの位置情報、身元、および行動に関する機密情報を収集しています。この分析は、何が収集されているのか、そしてなぜそれが重要なのかを説明しています。"
+
+  buttons:
+    understand_risks: "リスクを理解する"
+    download_report: "完全なレポートをダウンロード"
+    view_recommendations: "推奨事項を表示 →"
+
+  sections:
+    whats_happening: "わかりやすい言語で何が起こっているのか"
+    why_care: "なぜあなたは気にしますか？"
+    tech_details: "技術詳細(セキュリティプロフェッショナル向け)"
+    what_you_can_do: "あなたは何ができますか？"
+    key_findings: "一目でわかる重要な調査結果"
+    more_information: "詳細情報"
+
+  cards:
+    location: "あなたの位置情報は常に知られています"
+    identity: "あなたの身元が記録されます"
+    relationships: "あなたの関係は監視されています"
+    control: "あなたの行動は管理できます"
+    rights: "あなたの基本的人権"
+    vulnerable: "脆弱な人々へのリスク"
+    misuse: "悪用の可能性"
+
+  descriptions:
+    location_desc: "アプリは、あなたがどこにいるか、どこにいたか、どこに行くかを継続的に追跡します。これはあなたのためではなく、監視のためです。"
+    identity_desc: "顔認識と生体認証データが収集および保存されています。これにより、あなたが誰であるかの永続的なデジタル記録が作成されます。"
+    relationships_desc: "連絡先と通信パターンへのアクセスにより、あなたが誰を知っているか、誰と関連があるかが明らかになります。"
+    control_desc: "リモート監視および制御機能により、あなたのデバイスがあなたの行動と決定に影響を与えるために使用される可能性があります。"
+    rights_desc: "プライバシーは基本的人権です。この規模の監視はその権利を侵害し、潜在的な虐待を可能にします。"
+    vulnerable_desc: "家庭内暴力の生存者、難民、活動家、ジャーナリストは、このレベルの監視からのリスク増加に直面しています。"
+    misuse_desc: "今日の監視ツールは、明日の政治的迫害、恐喝、または抑圧のツールです。"
+
+  footer:
+    navigation: "ナビゲーション"
+    technical: "技術"
+    about: "について"
+    copyright: "公衆啓発のための教育分析。"
+    about_text: "これは公衆啓発のために作成された独立したセキュリティ分析です。すべての人が使用中の監視ツールを理解することに値すると信じています。"
+
+  related:
+    the_risks: "リスク"
+    understand_dangers: "監視の危険性を理解する"
+    what_to_do: "何をすべきか"
+    protect_privacy: "プライバシーを保護するための手順"
+    technical_analysis: "技術分析"
+    deep_dive: "当社の調査結果の詳細分析"
+
+  alerts:
+    critical: "重大な脆弱性"
+    warning: "重要な通知"
+    info: "この分析について"
+
+  quick_facts:
+    major_categories: "主なリスクカテゴリ"
+    continuous_tracking: "継続的な追跡"
+    data_retained: "保持されたデータ"
+    misuse_potential: "将来の悪用の可能性"
+
+  language_selector:
+    select_language: "言語を選択"
+    choose_language: "言語を選択してください"
+    current_language: "現在: {lang}"
+    auto_detect: "自動検出"
+    auto_detected: "自動検出"
+
+ar:
+  nav:
+    home: "الصفحة الرئيسية"
+    risks: "المخاطر"
+    what_to_do: "ماذا تفعل"
+    full_report: "التقرير الكامل"
+    language: "اللغة"
+
+  header:
+    title: "تحذير CBP Home"
+    subtitle: "تحليل الخصوصية"
+    skip_to_content: "انتقل إلى المحتوى الرئيسي"
+
+  hero:
+    warning_badge: "حول هذا التطبيق"
+    app_name: "CBP Home"
+    app_location: "متاح على Google Play و iOS App Store"
+    critical_warning: "تحذير حرج بشأن الخصوصية"
+    main_message: "يقوم هذا التطبيق بجمع تفاصيل حميمية حول موقعك وهويتك وسلوكك من خلال قدرات مراقبة شاملة. يشرح هذا التحليل ما يتم جمعه ولماذا يهم."
+
+  buttons:
+    understand_risks: "فهم المخاطر"
+    download_report: "تحميل التقرير الكامل"
+    view_recommendations: "عرض التوصيات →"
+
+  sections:
+    whats_happening: "ما يحدث باللغة العادية"
+    why_care: "لماذا يجب أن تهتم؟"
+    tech_details: "التفاصيل التقنية (لمحترفي الأمان)"
+    what_you_can_do: "ماذا يمكنك أن تفعل؟"
+    key_findings: "الاستنتاجات الرئيسية في لمحة"
+    more_information: "مزيد من المعلومات"
+
+  cards:
+    location: "موقعك معروف دائماً"
+    identity: "هويتك مسجلة"
+    relationships: "تتم مراقبة علاقاتك"
+    control: "يمكن التحكم في سلوكك"
+    rights: "حقوقك الأساسية"
+    vulnerable: "الخطر على الأشخاص الضعفاء"
+    misuse: "احتمال الإساءة"
+
+  descriptions:
+    location_desc: "يتابع التطبيق بشكل مستمر أين أنت وأين كنت وأين تذهب. هذا ليس لفائدتك، بل من أجل المراقبة."
+    identity_desc: "يتم جمع بيانات التعرف على الوجه والبيانات البيومترية وتخزينها. يؤدي هذا إلى إنشاء سجل رقمي دائم لمن أنت."
+    relationships_desc: "يكشف الوصول إلى جهات الاتصال الخاصة بك ونمط الاتصال عمن تعرف ومع من تتعاون."
+    control_desc: "تعني قدرات المراقبة والتحكم عن بعد أن جهازك يمكن استخدامه للتأثير على أفعالك وقراراتك."
+    rights_desc: "الخصوصية حق إنساني أساسي. المراقبة بهذا الحجم تنتهك هذا الحق وتمكن الإساءة المحتملة."
+    vulnerable_desc: "الناجون من العنف الأسري واللاجئون والنشطاء والصحفيون يواجهون خطراً متزايداً من مستوى المراقبة هذا."
+    misuse_desc: "أداة المراقبة اليوم هي أداة الاضطهاد السياسي والابتزاز أو الاضطهاد غداً."
+
+  footer:
+    navigation: "التنقل"
+    technical: "تقني"
+    about: "عن"
+    copyright: "تحليل تعليمي للوعي العام."
+    about_text: "هذا تحليل أمان مستقل تم إنشاؤه للوعي العام. نعتقد أن كل شخص يستحق فهم أدوات المراقبة المستخدمة."
+
+  related:
+    the_risks: "المخاطر"
+    understand_dangers: "فهم مخاطر المراقبة"
+    what_to_do: "ماذا تفعل"
+    protect_privacy: "خطوات لحماية خصوصيتك"
+    technical_analysis: "تحليل تقني"
+    deep_dive: "تحليل متعمق لنتائجنا"
+
+  alerts:
+    critical: "ثغرات حرجة"
+    warning: "إشعار مهم"
+    info: "حول هذا التحليل"
+
+  quick_facts:
+    major_categories: "فئات المخاطر الرئيسية"
+    continuous_tracking: "المراقبة المستمرة"
+    data_retained: "البيانات المحتفظ بها"
+    misuse_potential: "احتمال الإساءة في المستقبل"
+
+  language_selector:
+    select_language: "اختر اللغة"
+    choose_language: "اختر لغتك"
+    current_language: "الحالية: {lang}"
+    auto_detect: "الكشف التلقائي"
+    auto_detected: "الكشف التلقائي"
+
+ru:
+  nav:
+    home: "Главная"
+    risks: "Риски"
+    what_to_do: "Что делать"
+    full_report: "Полный отчет"
+    language: "Язык"
+
+  header:
+    title: "Предупреждение CBP Home"
+    subtitle: "Анализ конфиденциальности"
+    skip_to_content: "Перейти к основному содержанию"
+
+  hero:
+    warning_badge: "Об этом приложении"
+    app_name: "CBP Home"
+    app_location: "Доступно в Google Play и App Store iOS"
+    critical_warning: "Критическое предупреждение о конфиденциальности"
+    main_message: "Это приложение собирает личные сведения о вашем местоположении, личности и поведении благодаря комплексным возможностям наблюдения. Этот анализ объясняет, что собирается и почему это важно."
+
+  buttons:
+    understand_risks: "Понять риски"
+    download_report: "Загрузить полный отчет"
+    view_recommendations: "Просмотреть рекомендации →"
+
+  sections:
+    whats_happening: "Что происходит на простом языке"
+    why_care: "Почему вам должно быть дело?"
+    tech_details: "Технические детали (для специалистов по безопасности)"
+    what_you_can_do: "Что вы можете сделать?"
+    key_findings: "Ключевые выводы с первого взгляда"
+    more_information: "Дополнительная информация"
+
+  cards:
+    location: "Ваше местоположение всегда известно"
+    identity: "Ваша личность записывается"
+    relationships: "Ваши отношения отслеживаются"
+    control: "Ваше поведение может быть контролируемым"
+    rights: "Ваши основные права"
+    vulnerable: "Риск для уязвимых людей"
+    misuse: "Потенциал для злоупотребления"
+
+  descriptions:
+    location_desc: "Приложение постоянно отслеживает, где вы находитесь, где вы были и куда вы идете. Это не в ваших интересах - это наблюдение."
+    identity_desc: "Данные распознавания лиц и биометрические данные собираются и хранятся. Это создает постоянный цифровой отчет о том, кто вы."
+    relationships_desc: "Доступ к вашим контактам и моделям общения раскрывает, кого вы знаете и с кем общаетесь."
+    control_desc: "Возможности удаленного мониторинга и управления означают, что ваше устройство может использоваться для влияния на ваши действия и решения."
+    rights_desc: "Конфиденциальность является основным правом человека. Наблюдение в таком масштабе нарушает это право и допускает возможное злоупотребление."
+    vulnerable_desc: "Пережившие домашнее насилие, беженцы, активисты и журналисты подвергаются повышенному риску при таком уровне наблюдения."
+    misuse_desc: "Инструмент слежения сегодня - это инструмент политического преследования, шантажа или угнетения завтра."
+
+  footer:
+    navigation: "Навигация"
+    technical: "Технический"
+    about: "О сайте"
+    copyright: "Образовательный анализ для общественного сознания."
+    about_text: "Это независимый анализ безопасности, созданный для общественного сознания. Мы считаем, что каждый должен понимать используемые инструменты наблюдения."
+
+  related:
+    the_risks: "Риски"
+    understand_dangers: "Понять опасности наблюдения"
+    what_to_do: "Что делать"
+    protect_privacy: "Шаги по защите вашей конфиденциальности"
+    technical_analysis: "Техническое анализ"
+    deep_dive: "Глубокий анализ наших выводов"
+
+  alerts:
+    critical: "Критические уязвимости"
+    warning: "Важное уведомление"
+    info: "Об этом анализе"
+
+  quick_facts:
+    major_categories: "Основные категории рисков"
+    continuous_tracking: "Непрерывное отслеживание"
+    data_retained: "Сохраняемые данные"
+    misuse_potential: "Потенциал будущего злоупотребления"
+
+  language_selector:
+    select_language: "Выберите язык"
+    choose_language: "Выберите язык"
+    current_language: "Текущий: {lang}"
+    auto_detect: "Автоматическое определение"
+    auto_detected: "Автоматически определен"
+
+hi:
+  nav:
+    home: "होम"
+    risks: "जोखिम"
+    what_to_do: "क्या करें"
+    full_report: "पूरी रिपोर्ट"
+    language: "भाषा"
+
+  header:
+    title: "CBP Home चेतावनी"
+    subtitle: "गोपनीयता विश्लेषण"
+    skip_to_content: "मुख्य सामग्री पर जाएं"
+
+  hero:
+    warning_badge: "इस ऐप के बारे में"
+    app_name: "CBP Home"
+    app_location: "Google Play और iOS App Store पर उपलब्ध"
+    critical_warning: "महत्वपूर्ण गोपनीयता चेतावनी"
+    main_message: "यह एप्लिकेशन व्यापक निगरानी क्षमताओं के माध्यम से आपके स्थान, पहचान और व्यवहार के बारे में अंतरंग विवरण एकत्र कर रहा है। यह विश्लेषण बताता है कि क्या एकत्र किया जा रहा है और यह क्यों महत्वपूर्ण है।"
+
+  buttons:
+    understand_risks: "जोखिमों को समझें"
+    download_report: "पूरी रिपोर्ट डाउनलोड करें"
+    view_recommendations: "सिफारिशें देखें →"
+
+  sections:
+    whats_happening: "सादी भाषा में क्या हो रहा है"
+    why_care: "आपको क्यों परवाह करनी चाहिए?"
+    tech_details: "तकनीकी विवरण (सुरक्षा पेशेवरों के लिए)"
+    what_you_can_do: "आप क्या कर सकते हैं?"
+    key_findings: "एक नज़र में मुख्य निष्कर्ष"
+    more_information: "अधिक जानकारी"
+
+  cards:
+    location: "आपका स्थान हमेशा ज्ञात है"
+    identity: "आपकी पहचान दर्ज की जा रही है"
+    relationships: "आपके संबंध निगरानी की जा रहे हैं"
+    control: "आपके व्यवहार को नियंत्रित किया जा सकता है"
+    rights: "आपके मौलिक अधिकार"
+    vulnerable: "कमजोर लोगों के लिए जोखिम"
+    misuse: "दुरुपयोग की संभावना"
+
+  descriptions:
+    location_desc: "एप्लिकेशन लगातार ट्रैक करता है कि आप कहां हैं, कहां रहे हैं और कहां जा रहे हैं। यह आपके लाभ के लिए नहीं है - यह निगरानी है।"
+    identity_desc: "चेहरे की पहचान और बायोमेट्रिक डेटा एकत्र और संग्रहीत किए जा रहे हैं। यह आपकी पहचान का एक स्थायी डिजिटल रिकॉर्ड बनाता है।"
+    relationships_desc: "आपके संपर्क और संचार पैटर्न तक पहुंच से पता चलता है कि आप किसे जानते हैं और किसके साथ जुड़े हैं।"
+    control_desc: "दूरस्थ निगरानी और नियंत्रण क्षमताओं का मतलब है कि आपका डिवाइस आपके कार्यों और निर्णयों को प्रभावित करने के लिए उपयोग किया जा सकता है।"
+    rights_desc: "गोपनीयता एक मौलिक मानवाधिकार है। इस पैमाने पर निगरानी इस अधिकार का उल्लंघन करती है और संभावित दुरुपयोग को सक्षम बनाती है।"
+    vulnerable_desc: "घरेलू हिंसा के पीड़ित, शरणार्थी, कार्यकर्ता और पत्रकार इस स्तर की निगरानी से बढ़ा जोखिम का सामना करते हैं।"
+    misuse_desc: "आज का निगरानी उपकरण कल का राजनीतिक उत्पीड़न, ब्लैकमेल या दमन का उपकरण है।"
+
+  footer:
+    navigation: "नेविगेशन"
+    technical: "तकनीकी"
+    about: "बारे में"
+    copyright: "जनता की जागरूकता के लिए शैक्षणिक विश्लेषण।"
+    about_text: "यह जनता की जागरूकता के लिए बनाया गया एक स्वतंत्र सुरक्षा विश्लेषण है। हम मानते हैं कि हर किसी को उपयोग किए जा रहे निगरानी उपकरणों को समझने का अधिकार है।"
+
+  related:
+    the_risks: "जोखिम"
+    understand_dangers: "निगरानी के खतरों को समझें"
+    what_to_do: "क्या करें"
+    protect_privacy: "गोपनीयता की रक्षा के लिए कदम"
+    technical_analysis: "तकनीकी विश्लेषण"
+    deep_dive: "हमारे निष्कर्षों का गहन विश्लेषण"
+
+  alerts:
+    critical: "महत्वपूर्ण कमजोरियां"
+    warning: "महत्वपूर्ण सूचना"
+    info: "इस विश्लेषण के बारे में"
+
+  quick_facts:
+    major_categories: "मुख्य जोखिम श्रेणियां"
+    continuous_tracking: "निरंतर ट्रैकिंग"
+    data_retained: "डेटा बनाए रखा"
+    misuse_potential: "भविष्य के दुरुपयोग की संभावना"
+
+  language_selector:
+    select_language: "भाषा चुनें"
+    choose_language: "अपनी भाषा चुनें"
+    current_language: "वर्तमान: {lang}"
+    auto_detect: "स्वचालित पहचान"
+    auto_detected: "स्वचालित रूप से पहचाना गया"

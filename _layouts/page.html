@@ -1,0 +1,273 @@
+---
+layout: default
+---
+
+<style>
+    /* Page Content Styling */
+    .page-content h2 {
+        font-size: 1.875rem;
+        font-weight: 900;
+        color: white;
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid rgb(55, 65, 81);
+    }
+    .page-content h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: rgb(226, 232, 240);
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    .page-content h4 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: rgb(226, 232, 240);
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+    .page-content p {
+        color: rgb(203, 213, 225);
+        font-size: 1.125rem;
+        line-height: 1.625;
+        margin-bottom: 1rem;
+    }
+    .page-content ul, .page-content ol {
+        margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .page-content ul li, .page-content ol li {
+        color: rgb(203, 213, 225);
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+    }
+    .page-content strong {
+        color: white;
+        font-weight: 600;
+    }
+    .page-content em {
+        color: rgb(148, 163, 184);
+        font-style: italic;
+    }
+
+    /* Alert Boxes */
+    .alert {
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid;
+    }
+    .alert-critical {
+        background-color: rgba(127, 29, 29, 0.3);
+        border-left-color: rgb(239, 68, 68);
+        color: rgb(254, 226, 226);
+    }
+    .alert-warning {
+        background-color: rgba(124, 45, 18, 0.3);
+        border-left-color: rgb(234, 88, 12);
+        color: rgb(254, 237, 215);
+    }
+    .alert-info {
+        background-color: rgba(30, 58, 138, 0.3);
+        border-left-color: rgb(59, 130, 246);
+        color: rgb(219, 234, 254);
+    }
+    .alert h4 {
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: white;
+    }
+    .alert p {
+        font-size: 0.875rem;
+        margin-bottom: 0;
+    }
+
+    /* Scenario Boxes */
+    .scenario-box {
+        background-color: rgb(30, 41, 59);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid rgb(234, 88, 12);
+    }
+    .scenario-box h4 {
+        color: white;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        font-size: 1.125rem;
+    }
+    .scenario-box ul {
+        margin-left: 1rem;
+    }
+    .scenario-box li {
+        color: rgb(203, 213, 225);
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Code/Technical Blocks */
+    .page-content pre {
+        background-color: rgb(15, 23, 42);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        overflow-x: auto;
+        margin-bottom: 1.5rem;
+        border: 1px solid rgb(51, 65, 85);
+    }
+    .page-content code {
+        color: rgb(226, 232, 240);
+        font-family: monospace;
+        font-size: 0.875rem;
+        line-height: 1.625;
+    }
+    .page-content pre code {
+        color: rgb(226, 232, 240);
+    }
+
+    /* Comparison Tables */
+    .page-content table {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        border-collapse: collapse;
+    }
+    .page-content th {
+        background-color: rgb(30, 41, 59);
+        color: white;
+        font-weight: 700;
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border: 1px solid rgb(51, 65, 85);
+    }
+    .page-content td {
+        padding: 0.75rem 1rem;
+        border: 1px solid rgb(51, 65, 85);
+        color: rgb(203, 213, 225);
+    }
+    .page-content tr:hover {
+        background-color: rgba(30, 41, 59, 0.5);
+    }
+
+    /* Blockquotes */
+    .page-content blockquote {
+        border-left: 4px solid rgb(71, 85, 105);
+        background-color: rgba(30, 41, 59, 0.5);
+        padding: 1rem 1.5rem;
+        border-radius: 0.25rem;
+        margin: 1.5rem 0;
+        color: rgb(226, 232, 240);
+        font-style: italic;
+    }
+
+    /* SVG Diagram Styling */
+    .page-content svg {
+        display: block;
+        margin: 2rem auto;
+        max-width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+    @media (max-width: 768px) {
+        .page-content svg {
+            max-width: 90vw;
+        }
+    }
+</style>
+
+{% if page.hero_title %}
+    <!-- Custom Hero Section -->
+    <section class="{% if page.hero_color == 'danger' %}gradient-danger{% elsif page.hero_color == 'warning' %}gradient-warning{% else %}gradient-primary{% endif %} text-white py-20" aria-labelledby="page-hero-title">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                {% if page.hero_icon %}
+                    <div class="text-6xl mb-6" aria-hidden="true">{{ page.hero_icon }}</div>
+                {% endif %}
+                <h1 id="page-hero-title" class="text-4xl md:text-5xl lg:text-6xl font-900 mb-6 leading-tight">
+                    {{ page.hero_title }}
+                </h1>
+                {% if page.hero_description %}
+                    <p class="text-lg md:text-xl text-opacity-90 mb-10 leading-relaxed max-w-3xl mx-auto">
+                        {{ page.hero_description }}
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats/Summary Section (if provided) -->
+    {% if page.quick_facts %}
+    <section class="bg-slate-800 py-12 border-b border-slate-700" aria-labelledby="quick-facts-heading">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="quick-facts-heading" class="sr-only">Key Facts</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {% for fact in page.quick_facts %}
+                <article class="text-center" role="region" aria-label="{{ fact.label }}: {{ fact.number }}">
+                    <div class="text-3xl font-900 text-orange-400 mb-2" aria-hidden="false">{{ fact.number }}</div>
+                    <div class="text-slate-200 text-sm font-medium">{{ fact.label }}</div>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- Main Content Section -->
+    <section class="bg-slate-900 py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <article class="page-content">
+                {{ content }}
+            </article>
+        </div>
+    </section>
+
+    <!-- Key Takeaways Section (if provided) -->
+    {% if page.key_takeaways %}
+    <section class="bg-slate-800 py-16 border-t border-slate-700" aria-labelledby="takeaways-heading">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="takeaways-heading" class="text-3xl font-900 text-white mb-8">Key Takeaways</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {% for takeaway in page.key_takeaways %}
+                <article class="bg-slate-700 rounded-lg p-6 border-l-4 border-orange-500">
+                    <h3 class="text-white font-bold mb-2 text-lg">{{ takeaway.title }}</h3>
+                    <p class="text-slate-200 text-sm">{{ takeaway.description }}</p>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- Related Pages Navigation -->
+    <section class="bg-slate-900 py-12 border-t border-slate-700" aria-labelledby="related-heading">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="related-heading" class="text-xl font-bold text-white mb-6">More Information</h2>
+            <nav aria-label="Related pages">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="{{ '/risks.html' | relative_url }}" class="bg-slate-800 hover:bg-slate-700 rounded-lg p-6 transition-smooth border-l-4 border-red-500 focus-visible">
+                        <div class="text-2xl mb-2" aria-hidden="true">🎯</div>
+                        <h3 class="text-white font-bold mb-2">The Risks</h3>
+                        <p class="text-slate-300 text-sm">Understand the surveillance dangers</p>
+                    </a>
+                    <a href="{{ '/recommendations.html' | relative_url }}" class="bg-slate-800 hover:bg-slate-700 rounded-lg p-6 transition-smooth border-l-4 border-orange-500 focus-visible">
+                        <div class="text-2xl mb-2" aria-hidden="true">🛡️</div>
+                        <h3 class="text-white font-bold mb-2">What To Do</h3>
+                        <p class="text-slate-300 text-sm">Steps to protect your privacy</p>
+                    </a>
+                    <a href="{{ '/findings.html' | relative_url }}" class="bg-slate-800 hover:bg-slate-700 rounded-lg p-6 transition-smooth border-l-4 border-blue-500 focus-visible">
+                        <div class="text-2xl mb-2" aria-hidden="true">🔬</div>
+                        <h3 class="text-white font-bold mb-2">Technical Analysis</h3>
+                        <p class="text-slate-300 text-sm">Deep dive into our findings</p>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </section>
+{% else %}
+    <!-- Fallback if no hero configured -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <article class="page-content">
+            {{ content }}
+        </article>
+    </div>
+{% endif %}

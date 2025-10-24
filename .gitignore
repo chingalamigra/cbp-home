@@ -1,0 +1,44 @@
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+*.gem
+*.gemlock
+
+# Ruby
+.bundle/
+Gemfile.lock
+vendor/
+.ruby-version
+.ruby-gemset
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build
+dist/
+build/
+coverage/
+
+# OS
+Thumbs.db
+.DS_Store
+.env
+.env.local
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+.~*

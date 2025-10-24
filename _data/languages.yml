@@ -1,0 +1,112 @@
+# Language Configuration and Translations
+# Support for 10 major languages
+
+languages:
+  en:
+    name: "English"
+    native: "English"
+    flag: "🇺🇸"
+    direction: "ltr"
+    code: "en"
+    enabled: true
+
+  es:
+    name: "Spanish"
+    native: "Español"
+    flag: "🇪🇸"
+    direction: "ltr"
+    code: "es"
+    enabled: true
+
+  fr:
+    name: "French"
+    native: "Français"
+    flag: "🇫🇷"
+    direction: "ltr"
+    code: "fr"
+    enabled: true
+
+  de:
+    name: "German"
+    native: "Deutsch"
+    flag: "🇩🇪"
+    direction: "ltr"
+    code: "de"
+    enabled: true
+
+  pt:
+    name: "Portuguese"
+    native: "Português"
+    flag: "🇵🇹"
+    direction: "ltr"
+    code: "pt"
+    enabled: true
+
+  zh:
+    name: "Chinese (Simplified)"
+    native: "中文"
+    flag: "🇨🇳"
+    direction: "ltr"
+    code: "zh"
+    enabled: true
+
+  ja:
+    name: "Japanese"
+    native: "日本語"
+    flag: "🇯🇵"
+    direction: "ltr"
+    code: "ja"
+    enabled: true
+
+  ar:
+    name: "Arabic"
+    native: "العربية"
+    flag: "🇸🇦"
+    direction: "rtl"
+    code: "ar"
+    enabled: true
+
+  ru:
+    name: "Russian"
+    native: "Русский"
+    flag: "🇷🇺"
+    direction: "ltr"
+    code: "ru"
+    enabled: true
+
+  hi:
+    name: "Hindi"
+    native: "हिन्दी"
+    flag: "🇮🇳"
+    direction: "ltr"
+    code: "hi"
+    enabled: true
+
+# Default language
+default_language: "en"
+
+# Browser language to app language mapping
+browser_mapping:
+  en-US: "en"
+  en-GB: "en"
+  en: "en"
+  es-ES: "es"
+  es-MX: "es"
+  es: "es"
+  fr-FR: "fr"
+  fr-CA: "fr"
+  fr: "fr"
+  de-DE: "de"
+  de: "de"
+  pt-BR: "pt"
+  pt-PT: "pt"
+  pt: "pt"
+  zh-CN: "zh"
+  zh-Hans: "zh"
+  zh: "zh"
+  ja: "ja"
+  ja-JP: "ja"
+  ar: "ar"
+  ar-SA: "ar"
+  ru: "ru"
+  ru-RU: "ru"

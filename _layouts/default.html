@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}⚠️ Critical security warning about CBP Home app's surveillance capabilities. Understand the risks to your privacy.{% endif %}">
+    <title>{% if page.title %}{{ page.title }} - CBP Home Analysis{% else %}{{ site.title }}{% endif %}</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="{% if page.url == '/' %}website{% else %}article{% endif %}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}⚠️ Critical security warning about CBP Home app's surveillance capabilities. Understand the risks to your privacy.{% endif %}">
+    <meta property="og:image" content="{{ site.baseurl | absolute_url }}/assets/images/cbp-og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="CBP Home Critical Privacy Warning">
+    <meta property="og:site_name" content="{{ site.title }}">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ page.url | absolute_url }}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}⚠️ Critical security warning about CBP Home app's surveillance capabilities. Understand the risks to your privacy.{% endif %}">
+    <meta name="twitter:image" content="{{ site.baseurl | absolute_url }}/assets/images/cbp-og-image.png">
+    <meta name="twitter:image:alt" content="CBP Home Critical Privacy Warning">
+    {% if site.twitter_username %}<meta name="twitter:creator" content="@{{ site.twitter_username }}">{% endif %}
+
+    <!-- Author & Copyright -->
+    <meta name="author" content="{{ site.author }}">
+    <meta name="copyright" content="&copy; 2025 {{ site.author }}">
+
+    <!-- Keywords (supplementary) -->
+    <meta name="keywords" content="CBP Home, privacy, surveillance, security, government apps, biometric data, location tracking">
+
+    <!-- Theme & Color -->
+    <meta name="theme-color" content="#0f172a">
+    <meta name="msapplication-TileColor" content="#0f172a">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/accessibility.css' | relative_url }}">
+
+    <!-- Internationalization (i18n) Data -->
+    <script type="application/json" id="i18n-data">
+    {{ site.data.i18n | jsonify }}
+    </script>
+
+    <script type="application/json" id="languages-data">
+    {{ site.data.languages.languages | jsonify }}
+    </script>
+
+    <!-- i18n Bootstrap -->
+    <script>
+    (function() {
+      // Load i18n data into window for access by i18n.js
+      const i18nDataEl = document.getElementById('i18n-data');
+      const languagesDataEl = document.getElementById('languages-data');
+
+      if (i18nDataEl) {
+        try {
+          window.i18nData = JSON.parse(i18nDataEl.textContent);
+        } catch (e) {
+          console.error('Failed to parse i18n data:', e);
+        }
+      }
+
+      if (languagesDataEl) {
+        try {
+          window.languagesData = JSON.parse(languagesDataEl.textContent);
+        } catch (e) {
+          console.error('Failed to parse languages data:', e);
+        }
+      }
+    })();
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "{{ site.title }}",
+      "description": "{{ site.description }}",
+      "url": "{{ site.url }}{{ site.baseurl }}",
+      "author": {
+        "@type": "Organization",
+        "name": "{{ site.author }}"
+      },
+      "sameAs": [
+        "https://twitter.com/{{ site.twitter_username }}"
+      ]
+    }
+    </script>
+
+    {% if page.url != '/' %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{ page.title }}",
+      "description": "{% if page.description %}{{ page.description }}{% else %}{{ page.title }}{% endif %}",
+      "url": "{{ page.url | absolute_url }}",
+      "author": {
+        "@type": "Organization",
+        "name": "{{ site.author }}"
+      },
+      "datePublished": "{{ site.time | date: '%Y-%m-%d' }}",
+      "image": "{{ site.baseurl | absolute_url }}/assets/images/cbp-og-image.png"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ site.url }}{{ site.baseurl }}/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{ page.title }}",
+          "item": "{{ page.url | absolute_url }}"
+        }
+      ]
+    }
+    </script>
+    {% endif %}
+
+    <script>
+        // Firefox zoom level fix
+        (function() {
+            function resetZoom() {
+                // Reset zoom using cssText to properly apply !important
+                if (document.documentElement) {
+                    document.documentElement.style.cssText = 'zoom: 1 !important;';
+                }
+                if (document.body) {
+                    document.body.style.cssText = 'zoom: 1 !important;';
+                }
+
+                // Also try visualViewport API for modern browsers
+                if (window.visualViewport) {
+                    try {
+                        window.visualViewport.scale = 1;
+                    } catch (e) {
+                        // This might fail in some browsers, that's ok
+                    }
+                }
+            }
+
+            // Try to set it as early as possible
+            resetZoom();
+
+            // Also set on various lifecycle events
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', resetZoom);
+            }
+            window.addEventListener('load', resetZoom);
+            document.addEventListener('readystatechange', resetZoom);
+
+            // Try after delays to catch any late-loading scripts
+            setTimeout(resetZoom, 100);
+            setTimeout(resetZoom, 300);
+            setTimeout(resetZoom, 500);
+            setTimeout(resetZoom, 1000);
+        })();
+    </script>
+    <style>
+        html {
+            font-size: 16px;
+            zoom: 1;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        body {
+            zoom: 1;
+            font-size: 16px;
+        }
+        * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            letter-spacing: -0.02em;
+        }
+        .gradient-primary {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+        }
+        .gradient-danger {
+            background: linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%);
+        }
+        .gradient-warning {
+            background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+        }
+        .transition-smooth {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        a:focus-visible {
+            outline: 3px solid #1e40af;
+            outline-offset: 2px;
+        }
+        button:focus-visible {
+            outline: 3px solid #1e40af;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100">
+    <!-- Skip to content -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-blue-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="bg-slate-950 border-b border-slate-700 sticky top-0 z-40" role="banner">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary navigation">
+            <div class="flex items-center justify-between h-16 gap-4">
+                <a href="{{ '/' | relative_url }}" class="flex items-center gap-3 transition-smooth hover:opacity-80" aria-label="CBP Home Warning - Privacy Analysis">
+                    <div class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center text-lg font-bold text-white" aria-hidden="true">⚠️</div>
+                    <div class="hidden sm:block">
+                        <div class="font-900 text-white text-xs leading-tight tracking-wide">CBP HOME WARNING</div>
+                        <div class="text-xs text-red-200" data-i18n="header.subtitle">Privacy Analysis</div>
+                    </div>
+                </a>
+                <ul class="hidden md:flex items-center gap-6">
+                    <li><a href="{{ '/' | relative_url }}" class="text-slate-300 hover:text-white transition-smooth font-medium text-sm" aria-current="{% if page.url == '/' %}page{% else %}false{% endif %}" data-i18n="nav.home">HOME</a></li>
+                    <li><a href="{{ '/risks.html' | relative_url }}" class="text-slate-300 hover:text-white transition-smooth font-medium text-sm" aria-current="{% if page.url contains 'risks' %}page{% else %}false{% endif %}" data-i18n="nav.risks">THE RISKS</a></li>
+                    <li><a href="{{ '/recommendations.html' | relative_url }}" class="text-slate-300 hover:text-white transition-smooth font-medium text-sm" aria-current="{% if page.url contains 'recommendations' %}page{% else %}false{% endif %}" data-i18n="nav.what_to_do">WHAT TO DO</a></li>
+                </ul>
+                <div class="flex items-center gap-3 ml-auto">
+                    <!-- Language Switcher -->
+                    <div id="language-switcher" class="language-switcher"></div>
+                    <a href="{{ '/assets/pdf/CBP-Home-Security-Report.pdf' | relative_url }}" download class="gradient-danger text-white px-4 py-2 rounded-lg font-bold text-sm transition-smooth hover:shadow-lg focus-visible hidden sm:inline-block" aria-label="Download Full Security Report PDF" data-i18n="buttons.download_report">
+                        FULL REPORT
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        {% if page.url == '/' or page.url == '/cbp-warning-site/' %}
+            <!-- HOME PAGE - PSA STYLE -->
+
+            <!-- Hero Section -->
+            <section class="gradient-danger text-white py-20" aria-label="Critical Privacy Warning about CBP Home">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- App Identifier -->
+                    <div class="mb-12 text-center">
+                        <div class="inline-block bg-white bg-opacity-20 backdrop-blur px-6 py-3 rounded-full mb-6">
+                            <p class="text-sm font-semibold text-red-50 uppercase tracking-wide" data-i18n="hero.warning_badge">About This App</p>
+                        </div>
+                        <div class="flex items-center justify-center gap-4 mb-8">
+                            <div class="w-20 h-20 bg-white rounded-3xl flex items-center justify-center text-3xl" aria-hidden="true">
+                                📱
+                            </div>
+                            <div class="text-left">
+                                <h2 class="text-3xl md:text-4xl font-900" data-i18n="hero.app_name">CBP Home</h2>
+                                <p class="text-red-100 text-lg" data-i18n="hero.app_location">Available on Google Play and iOS App Store</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Message -->
+                    <div class="text-center">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-900 mb-6 leading-tight" data-i18n="hero.critical_warning">
+                            Critical Privacy Warning
+                        </h1>
+                        <p class="text-lg md:text-xl text-red-50 mb-10 leading-relaxed max-w-3xl mx-auto" data-i18n="hero.main_message">
+                            This application is collecting intimate details about your location, identity, and behavior through comprehensive surveillance capabilities. This analysis explains what's being collected and why it matters.
+                        </p>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#understand" class="bg-white text-red-600 px-8 py-4 rounded-lg font-bold text-base transition-smooth hover:shadow-2xl focus-visible" data-i18n="buttons.understand_risks">
+                            Understand the Risks
+                        </a>
+                        <a href="{{ '/assets/pdf/CBP-Home-Security-Report.pdf' | relative_url }}" download class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-base transition-smooth hover:bg-white hover:text-red-600 focus-visible" data-i18n="buttons.download_report">
+                            Download Full Report
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Simple Explanation Section -->
+            <section id="understand" class="bg-slate-800 py-16" aria-labelledby="explain-heading">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 id="explain-heading" class="text-4xl font-black mb-12 text-center" data-i18n="sections.whats_happening">What's Happening in Plain English</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Card 1: Location -->
+                        <article class="bg-slate-700 rounded-2xl p-8 border-l-4 border-orange-500">
+                            <div class="text-4xl mb-4" aria-hidden="true">📍</div>
+                            <h3 class="text-2xl font-bold mb-3" data-i18n="cards.location">Your Location is Always Known</h3>
+                            <p class="text-slate-200 text-lg leading-relaxed" data-i18n="descriptions.location_desc">
+                                The app continuously tracks where you are, where you've been, and where you go. This isn't for your benefit—it's for surveillance.
+                            </p>
+                        </article>
+
+                        <!-- Card 2: Identity -->
+                        <article class="bg-slate-700 rounded-2xl p-8 border-l-4 border-orange-500">
+                            <div class="text-4xl mb-4" aria-hidden="true">🔐</div>
+                            <h3 class="text-2xl font-bold mb-3" data-i18n="cards.identity">Your Identity is Recorded</h3>
+                            <p class="text-slate-200 text-lg leading-relaxed" data-i18n="descriptions.identity_desc">
+                                Facial recognition and biometric data are being collected and stored. This creates a permanent digital record of who you are.
+                            </p>
+                        </article>
+
+                        <!-- Card 3: Relationships -->
+                        <article class="bg-slate-700 rounded-2xl p-8 border-l-4 border-orange-500">
+                            <div class="text-4xl mb-4" aria-hidden="true">👥</div>
+                            <h3 class="text-2xl font-bold mb-3" data-i18n="cards.relationships">Your Relationships Are Monitored</h3>
+                            <p class="text-slate-200 text-lg leading-relaxed" data-i18n="descriptions.relationships_desc">
+                                Access to your contacts and communication patterns reveals who you know and who you associate with.
+                            </p>
+                        </article>
+
+                        <!-- Card 4: Control -->
+                        <article class="bg-slate-700 rounded-2xl p-8 border-l-4 border-orange-500">
+                            <div class="text-4xl mb-4" aria-hidden="true">🎮</div>
+                            <h3 class="text-2xl font-bold mb-3" data-i18n="cards.control">Your Behavior Can Be Controlled</h3>
+                            <p class="text-slate-200 text-lg leading-relaxed" data-i18n="descriptions.control_desc">
+                                Remote monitoring and control capabilities mean your device can be used to influence your actions and decisions.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why It Matters -->
+            <section class="bg-slate-900 py-16" aria-labelledby="matters-heading">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 id="matters-heading" class="text-4xl font-black mb-8" data-i18n="sections.why_care">Why Should You Care?</h2>
+                    <div class="space-y-6">
+                        <article class="flex gap-4">
+                            <span class="text-4xl flex-shrink-0" aria-hidden="true">🛡️</span>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2" data-i18n="cards.rights">Your Fundamental Rights</h3>
+                                <p class="text-slate-200 text-lg leading-relaxed" data-i18n="descriptions.rights_desc">
+                                    Privacy is a fundamental human right. Surveillance on this scale violates that right and enables potential abuse.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="flex gap-4">
+                            <span class="text-4xl flex-shrink-0" aria-hidden="true">💔</span>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2" data-i18n="cards.vulnerable">Risk to Vulnerable People</h3>
+                                <p class="text-slate-200 text-lg leading-relaxed" data-i18n="descriptions.vulnerable_desc">
+                                    Domestic abuse survivors, refugees, activists, and journalists are at heightened risk from this level of surveillance.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="flex gap-4">
+                            <span class="text-4xl flex-shrink-0" aria-hidden="true">🚨</span>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2" data-i18n="cards.misuse">Potential for Misuse</h3>
+                                <p class="text-slate-200 text-lg leading-relaxed" data-i18n="descriptions.misuse_desc">
+                                    Today's surveillance tool is tomorrow's tool for political persecution, blackmail, or oppression.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Details (for those who want more) -->
+            <section class="bg-slate-800 py-16 border-t border-slate-700" aria-labelledby="tech-details-heading">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <details class="cursor-pointer group" role="region" aria-label="Technical details for security professionals">
+                        <summary id="tech-details-heading" class="text-2xl font-bold flex items-center gap-3 mb-6 hover:text-orange-400 transition-smooth list-none">
+                            <span class="text-2xl" aria-hidden="true">🔬</span>
+                            <span>Technical Details (For Security Professionals)</span>
+                            <span class="text-xl group-open:rotate-180 transition-transform" aria-hidden="true">▼</span>
+                        </summary>
+                        <div class="space-y-6 ml-11 text-slate-200">
+                            {{ content }}
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="gradient-warning text-white py-20" aria-labelledby="cta-heading">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 id="cta-heading" class="text-4xl font-black mb-6" data-i18n="sections.what_you_can_do">What Can You Do?</h2>
+                    <p class="text-xl text-orange-100 mb-8 leading-relaxed">
+                        Read our full recommendations and learn how to protect your privacy
+                    </p>
+                    <a href="{{ '/recommendations.html' | relative_url }}" class="bg-white text-orange-600 px-8 py-4 rounded-lg font-bold text-lg transition-smooth hover:shadow-2xl focus-visible inline-block" aria-label="View Recommendations for protecting your privacy" data-i18n="buttons.view_recommendations">
+                        View Recommendations →
+                    </a>
+                </div>
+            </section>
+
+        {% else %}
+            <!-- SUBPAGE - NORMAL LAYOUT -->
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <article class="prose-lg text-slate-100">
+                    {{ content }}
+                </article>
+            </div>
+        {% endif %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-700 py-12" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
+                <nav>
+                    <h4 class="font-black text-white mb-4" data-i18n="footer.navigation">Navigation</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="{{ '/' | relative_url }}" class="hover:text-orange-400 transition-smooth" data-i18n="nav.home">Home</a></li>
+                        <li><a href="{{ '/risks.html' | relative_url }}" class="hover:text-orange-400 transition-smooth" data-i18n="nav.risks">The Risks</a></li>
+                        <li><a href="{{ '/recommendations.html' | relative_url }}" class="hover:text-orange-400 transition-smooth" data-i18n="nav.what_to_do">What To Do</a></li>
+                    </ul>
+                </nav>
+                <nav>
+                    <h4 class="font-black text-white mb-4" data-i18n="footer.technical">Technical</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="{{ '/data-collection.html' | relative_url }}" class="hover:text-orange-400 transition-smooth">Data Collection</a></li>
+                        <li><a href="{{ '/permissions.html' | relative_url }}" class="hover:text-orange-400 transition-smooth">Permissions</a></li>
+                        <li><a href="{{ '/findings.html' | relative_url }}" class="hover:text-orange-400 transition-smooth">Technical Findings</a></li>
+                    </ul>
+                </nav>
+                <section aria-label="About this site">
+                    <h4 class="font-black text-white mb-4" data-i18n="footer.about">About</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="footer.about_text">
+                        This is an independent security analysis created for public awareness. We believe everyone deserves to understand the surveillance tools being used.
+                    </p>
+                </section>
+            </div>
+            <div class="border-t border-slate-700 pt-8 text-center text-slate-500 text-sm">
+                <p>&copy; 2025 {{ site.author }}. <span data-i18n="footer.copyright">Educational analysis for public awareness.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Internationalization Script -->
+    <script src="{{ '/assets/js/i18n.js' | relative_url }}" defer></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7f1d1d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fecaca;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Decorative pattern -->
+  <circle cx="100" cy="100" r="80" fill="rgba(255,255,255,0.05)"/>
+  <circle cx="1100" cy="530" r="120" fill="rgba(255,255,255,0.05)"/>
+  <circle cx="600" cy="0" r="100" fill="rgba(255,255,255,0.03)"/>
+
+  <!-- Warning icon -->
+  <g transform="translate(150, 150)">
+    <rect width="120" height="120" rx="20" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="3"/>
+    <text x="60" y="85" font-size="80" text-anchor="middle" font-family="Arial, sans-serif">⚠️</text>
+  </g>
+
+  <!-- Main heading -->
+  <text x="600" y="120" font-size="72" font-weight="900" text-anchor="middle" font-family="Arial, sans-serif" fill="white" letter-spacing="-2">
+    Critical Privacy
+  </text>
+  <text x="600" y="210" font-size="72" font-weight="900" text-anchor="middle" font-family="Arial, sans-serif" fill="white" letter-spacing="-2">
+    Warning
+  </text>
+
+  <!-- Subheading -->
+  <text x="600" y="280" font-size="36" font-weight="500" text-anchor="middle" font-family="Arial, sans-serif" fill="rgba(254, 202, 202, 0.95)">
+    CBP Home App Analysis
+  </text>
+
+  <!-- Key message -->
+  <text x="600" y="360" font-size="28" text-anchor="middle" font-family="Arial, sans-serif" fill="rgba(255, 255, 255, 0.9)">
+    Location Tracking • Biometric Data • Full Surveillance
+  </text>
+
+  <!-- Bottom tagline -->
+  <text x="600" y="520" font-size="24" font-weight="600" text-anchor="middle" font-family="Arial, sans-serif" fill="rgba(255, 255, 255, 0.85)">
+    Understand the risks to your privacy
+  </text>
+
+  <!-- Decorative line -->
+  <line x1="200" y1="580" x2="1000" y2="580" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+
+  <!-- URL/Source -->
+  <text x="600" y="615" font-size="16" text-anchor="middle" font-family="Arial, sans-serif" fill="rgba(255, 255, 255, 0.7)">
+    Educational Security Analysis
+  </text>
+</svg>

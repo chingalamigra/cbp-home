@@ -1,0 +1,43 @@
+# Jekyll configuration for CBP Home App Analysis
+title: CBP Home App - Critical Privacy & Surveillance Analysis
+description: Public awareness and educational analysis of the CBP Home mobile application data collection practices
+baseurl: "/cbp-home"
+url: "https://antifasec.github.io"
+
+# Jekyll settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Site metadata
+author: Security Research Community
+email: security@example.com
+twitter_username: your_handle
+
+# Social media images
+og_image: "/assets/images/cbp-og-image.svg"
+twitter_image: "/assets/images/cbp-og-image.svg"
+
+# SEO & Accessibility
+lang: en
+default_locale: en_US
+
+# Collections
+collections_dir: _content
+
+# Exclude from processing
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+
+# Build settings
+highlighter: rouge
+excerpt_separator: "<!--more-->"
+future: false
+show_drafts: false
