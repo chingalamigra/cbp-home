@@ -852,3 +852,171 @@ hi:
     current_language: "वर्तमान: {lang}"
     auto_detect: "स्वचालित पहचान"
     auto_detected: "स्वचालित रूप से पहचाना गया"
+
+sr:
+  nav:
+    home: "Почетна"
+    risks: "Ризици"
+    what_to_do: "Шта урадити"
+    full_report: "Потпун извештај"
+    language: "Језик"
+
+  header:
+    title: "Упозорење ЦБП Хоме"
+    subtitle: "Анализа приватности"
+    skip_to_content: "Пређи на главни садржај"
+
+  hero:
+    warning_badge: "О овој апликацији"
+    app_name: "CBP Home"
+    app_location: "Доступно на Гугл Плеју и иОС Апп Стору"
+    critical_warning: "Критично упозорење о приватности"
+    main_message: "Ова апликација прикупља интимне детаље о вашој локацији, идентитету и понашању кроз свеобухватне могућности надзора. Ова анализа објашњава шта се прикупља и зашто је то важно."
+
+  buttons:
+    understand_risks: "Разумети ризике"
+    download_report: "Преузмите потпун извештај"
+    view_recommendations: "Погледајте препоруке →"
+
+  sections:
+    whats_happening: "Шта се дешава на простом језику"
+    why_care: "Зашто би вас требало да брине?"
+    tech_details: "Технички детаљи (за стручњаке за безбедност)"
+    what_you_can_do: "Шта можете урадити?"
+    key_findings: "Кључна открића у једном погледу"
+    more_information: "Више информација"
+
+  cards:
+    location: "Ваша локација је увек позната"
+    identity: "Ваш идентитет је забележен"
+    relationships: "Ваше односе се надзиру"
+    control: "Ваше понашање може се контролисати"
+    rights: "Ваша основна права"
+    vulnerable: "Ризик за рањиве људе"
+    misuse: "Потенцијал за злоупотребу"
+
+  descriptions:
+    location_desc: "Апликација континуирано прати где сте, где сте били и куда идете. Ово није за вашу корист - то је надзор."
+    identity_desc: "Подаци за препознавање лица и биометријски подаци се прикупљају и чувају. Ово прави трајан дигитални запис о томе ко сте."
+    relationships_desc: "Приступ вашим контактима и обрасцима комуникације открива кога познајете и са ким сте повезани."
+    control_desc: "Могућности даљинског надзора и управљања значе да ваш уређај може бити коришћен да утиче на ваше акције и одлуке."
+    rights_desc: "Приватност је основно људско право. Надзор у овој скали крши то право и омогућава потенцијалну злоупотребу."
+    vulnerable_desc: "Преживели домаћег насиља, избеглице, активисти и новинари суочени су са повећаним ризиком од овог нивоа надзора."
+    misuse_desc: "Алат за надзор данас је алат за политичко гоњење, шантажу или угњетање сутра."
+
+  footer:
+    navigation: "Навигација"
+    technical: "Технички"
+    about: "О"
+    copyright: "Образовна анализа за јавну свест."
+    about_text: "Ово је независна анализа безбедности направљена за јавну свест. Верујемо да свако заслужује да разуме алате за надзор који се користе."
+
+  related:
+    the_risks: "Ризици"
+    understand_dangers: "Разумети опасности надзора"
+    what_to_do: "Шта урадити"
+    protect_privacy: "Кораци за заштиту ваше приватности"
+    technical_analysis: "Техничка анализа"
+    deep_dive: "Дубински увид у наша открића"
+
+  alerts:
+    critical: "Критичне рањивости"
+    warning: "Важна обавест"
+    info: "О овој анализи"
+
+  quick_facts:
+    major_categories: "Главне категорије ризика"
+    continuous_tracking: "Континуирано праћење"
+    data_retained: "Задржани подаци"
+    misuse_potential: "Потенцијал будуће злоупотребе"
+
+  language_selector:
+    select_language: "Одаберите језик"
+    choose_language: "Одаберите свој језик"
+    current_language: "Trenutni: {lang}"
+    auto_detect: "Аутоматска детекција"
+    auto_detected: "Аутоматски детектован"
+
+hr:
+  nav:
+    home: "Početna"
+    risks: "Rizici"
+    what_to_do: "Što trebate raditi"
+    full_report: "Puni izvještaj"
+    language: "Jezik"
+
+  header:
+    title: "Upozorenje CBP Home"
+    subtitle: "Analiza privatnosti"
+    skip_to_content: "Preskoči na glavni sadržaj"
+
+  hero:
+    warning_badge: "O ovoj aplikaciji"
+    app_name: "CBP Home"
+    app_location: "Dostupno na Google Playu i iOS App Storeu"
+    critical_warning: "Kritično upozorenje o privatnosti"
+    main_message: "Ova aplikacija prikuplja intimne pojedinosti o vašoj lokaciji, identitetu i ponašanju kroz sveobuhvatne mogućnosti praćenja. Ova analiza objašnjava što se prikuplja i zašto je to važno."
+
+  buttons:
+    understand_risks: "Razumite rizike"
+    download_report: "Preuzmite puni izvještaj"
+    view_recommendations: "Pogledajte preporuke →"
+
+  sections:
+    whats_happening: "Što se događa na običnom jeziku"
+    why_care: "Zašto bi vas trebalo biti briga?"
+    tech_details: "Tehnički detalji (za stručnjake za sigurnost)"
+    what_you_can_do: "Što možete učiniti?"
+    key_findings: "Ključna otkrića u jednom pogledu"
+    more_information: "Više informacija"
+
+  cards:
+    location: "Vaša lokacija je uvijek poznata"
+    identity: "Vaš identitet je zabilježen"
+    relationships: "Vaši odnosi se prate"
+    control: "Vaše ponašanje se može kontrolirati"
+    rights: "Vaša osnovna prava"
+    vulnerable: "Rizik za ranjive ljude"
+    misuse: "Potencijal za zloupotrebu"
+
+  descriptions:
+    location_desc: "Aplikacija neprekidno prati gdje ste, gdje ste bili i gdje idete. Ovo nije za vašu korist - to je praćenje."
+    identity_desc: "Podaci za prepoznavanje lica i biometrijski podaci se prikupljaju i čuvaju. Ovo kreira trajni digitalni zapis o tome tko ste."
+    relationships_desc: "Pristup vašim kontaktima i uzorcima komunikacije otkriva koga poznajete i s kim ste povezani."
+    control_desc: "Mogućnosti daljinskog praćenja i upravljanja znače da vaš uređaj može biti korišten da utječe na vaše radnje i odluke."
+    rights_desc: "Privatnost je temeljno ljudsko pravo. Praćenje u ovoj skali krši to pravo i omogućava potencijalnu zloupotrebu."
+    vulnerable_desc: "Preživjeli obiteljskog nasilja, izbjeglice, aktivisti i novinari suočeni su s povećanim rizikom od ovog nivoa praćenja."
+    misuse_desc: "Alat za praćenje danas je alat za političko proganjanje, ucjenu ili ugnjetavanje sutra."
+
+  footer:
+    navigation: "Navigacija"
+    technical: "Tehnički"
+    about: "O nama"
+    copyright: "Edukativna analiza za svjesnost javnosti."
+    about_text: "Ovo je neovisna analiza sigurnosti napravljena za svjesnost javnosti. Vjerujemo da svako zaslužuje razumjeti alate za praćenje koji se koriste."
+
+  related:
+    the_risks: "Rizici"
+    understand_dangers: "Razumite opasnosti praćenja"
+    what_to_do: "Što trebate raditi"
+    protect_privacy: "Koraci za zaštitu vaše privatnosti"
+    technical_analysis: "Tehnička analiza"
+    deep_dive: "Detaljno iskopavanje naših rezultata"
+
+  alerts:
+    critical: "Kritične ranjivosti"
+    warning: "Važna obavijest"
+    info: "O ovoj analizi"
+
+  quick_facts:
+    major_categories: "Glavne kategorije rizika"
+    continuous_tracking: "Kontinuirano praćenje"
+    data_retained: "Čuvani podaci"
+    misuse_potential: "Potencijal za budućeg zloupotrebu"
+
+  language_selector:
+    select_language: "Odaberite jezik"
+    choose_language: "Odaberite svoj jezik"
+    current_language: "Trenutni: {lang}"
+    auto_detect: "Automatska detekcija"
+    auto_detected: "Automatski detektovano"

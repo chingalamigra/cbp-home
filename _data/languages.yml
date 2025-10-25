@@ -82,6 +82,22 @@ languages:
     code: "hi"
     enabled: true
 
+  sr:
+    name: "Serbian"
+    native: "Српски"
+    flag: "🇷🇸"
+    direction: "ltr"
+    code: "sr"
+    enabled: true
+
+  hr:
+    name: "Croatian"
+    native: "Hrvatski"
+    flag: "🇭🇷"
+    direction: "ltr"
+    code: "hr"
+    enabled: true
+
 # Default language
 default_language: "en"
 
@@ -110,3 +126,7 @@ browser_mapping:
   ar-SA: "ar"
   ru: "ru"
   ru-RU: "ru"
+  sr: "sr"
+  sr-RS: "sr"
+  hr: "hr"
+  hr-HR: "hr"
