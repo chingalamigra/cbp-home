@@ -10,7 +10,7 @@
   const CONFIG = {
     storageKey: 'cbp-warning-language',
     defaultLanguage: 'en',
-    supportedLanguages: ['en', 'es', 'fr', 'de', 'pt', 'zh', 'ja', 'ar', 'ru', 'hi'],
+    supportedLanguages: ['en', 'es', 'fr', 'de', 'pt', 'zh', 'ja', 'ar', 'ru', 'hi', 'sr', 'hr'],
     debugMode: false
   };
 
