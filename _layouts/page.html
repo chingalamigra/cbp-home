@@ -243,9 +243,19 @@ layout: default
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 id="related-heading" class="text-xl font-bold text-white mb-6">More Information</h2>
             <nav aria-label="Related pages">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <a href="{{ '/methodology.html' | relative_url }}" class="bg-slate-800 hover:bg-slate-700 rounded-lg p-6 transition-smooth border-l-4 border-purple-500 focus-visible">
+                        <div class="text-2xl mb-2" aria-hidden="true">🔬</div>
+                        <h3 class="text-white font-bold mb-2">Methodology</h3>
+                        <p class="text-slate-300 text-sm">How this analysis was conducted</p>
+                    </a>
+                    <a href="{{ '/findings.html' | relative_url }}" class="bg-slate-800 hover:bg-slate-700 rounded-lg p-6 transition-smooth border-l-4 border-blue-500 focus-visible">
+                        <div class="text-2xl mb-2" aria-hidden="true">📊</div>
+                        <h3 class="text-white font-bold mb-2">Technical Analysis</h3>
+                        <p class="text-slate-300 text-sm">Deep dive into our findings</p>
+                    </a>
                     <a href="{{ '/risks.html' | relative_url }}" class="bg-slate-800 hover:bg-slate-700 rounded-lg p-6 transition-smooth border-l-4 border-red-500 focus-visible">
-                        <div class="text-2xl mb-2" aria-hidden="true">🎯</div>
+                        <div class="text-2xl mb-2" aria-hidden="true">⚠️</div>
                         <h3 class="text-white font-bold mb-2">The Risks</h3>
                         <p class="text-slate-300 text-sm">Understand the surveillance dangers</p>
                     </a>
@@ -253,11 +263,6 @@ layout: default
                         <div class="text-2xl mb-2" aria-hidden="true">🛡️</div>
                         <h3 class="text-white font-bold mb-2">What To Do</h3>
                         <p class="text-slate-300 text-sm">Steps to protect your privacy</p>
-                    </a>
-                    <a href="{{ '/findings.html' | relative_url }}" class="bg-slate-800 hover:bg-slate-700 rounded-lg p-6 transition-smooth border-l-4 border-blue-500 focus-visible">
-                        <div class="text-2xl mb-2" aria-hidden="true">🔬</div>
-                        <h3 class="text-white font-bold mb-2">Technical Analysis</h3>
-                        <p class="text-slate-300 text-sm">Deep dive into our findings</p>
                     </a>
                 </div>
             </nav>

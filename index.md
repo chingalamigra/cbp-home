@@ -154,6 +154,7 @@ If already installed, consider uninstalling or using a separate device with mini
 For comprehensive technical analysis with decompiled source code and detailed findings:
 
 - **[Complete PDF Report](/cbp-warning-site/assets/pdf/CBP-Home-Security-Report.pdf)** - 30-page technical deep dive
+- **[Analysis Methodology](/cbp-warning-site/methodology.html)** - How this analysis was conducted
 - **[Key Findings](/cbp-warning-site/findings.html)** - Detailed findings summary
 - **[Risk Assessment](/cbp-warning-site/risks.html)** - Complete risk analysis
 - **[Permissions](/cbp-warning-site/permissions.html)** - Android permissions explained
