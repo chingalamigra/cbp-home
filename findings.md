@@ -8,7 +8,7 @@ hero_description: Detailed security analysis and reverse-engineering discoveries
 hero_icon: "🔬"
 hero_color: "primary"
 quick_facts:
-  - number: "8+"
+  - number: "9+"
     label: "Major Findings"
   - number: "GPS"
     label: "Location Tracking"
@@ -363,7 +363,112 @@ FBI/DHS Databases
 
 ---
 
-## Finding #8: No Malware, Pure Surveillance by Design
+## Finding #9: Anti-Debugging & Code Protection Measures
+
+<div class="alert alert-critical">
+<h4>CRITICAL - Active Defense Against Analysis</h4>
+</div>
+
+### Evidence
+
+The application includes sophisticated anti-tampering and anti-debugging measures in native code libraries, specifically in the iProov biometric processing library (libiproov-com-calcifer-lib.so).
+
+**Location:** libiproov-com-calcifer-lib.so (27 KB ARM aarch64 binary)
+
+### Detected Protection Mechanisms
+
+**Debugging Detection:**
+- `debuggable` - Checks APK debuggable flag
+- `serviceAdbRoot` - Detects Android Debug Bridge (ADB)
+- `suPath` - Checks for superuser/root access
+- `selinux` - Queries SELinux security status
+- `osSecure` - Overall OS security assessment
+
+**Rooting Tool Detection:**
+- `/sbin/.magisk/modules/riru_lsposed` - Magisk module directory monitoring
+- `/cache/recovery/xposed.zip` - Xposed framework detection
+- `/data/media/0/Android/data/org.lsposed.manager` - LSPosed manager detection
+
+**Runtime Detection:**
+- `/proc/self/fd` - File descriptor monitoring
+- `/proc/self/maps` - Memory mapping inspection (debugger detection)
+- `/proc/self/task` - Thread enumeration
+
+**Whimsically-Named Functions (Obfuscation):**
+- `vorpalBladeOfDebugging` - Anti-debugging mechanisms
+- `crossSwords` - Encryption/encoding operations
+- `swordOfDamocles` - Code integrity verification
+- `swordAndSorceryAlgorithm` - Cryptographic algorithm
+- `frostMournChillOut` - Process termination/security lockout
+- `swordOfOmens` - Additional security checks
+- `masterSwordUpgrade` - Security level escalation
+- `needleThreadTheLogic` - Complex obfuscation
+
+### What This Means
+
+**Intentional Barriers to Analysis:**
+- Code specifically designed to detect analysis tools
+- Refuses to execute on modified/rooted devices
+- Prevents debugger attachment
+- Detects common reverse engineering frameworks
+- Terminates execution if tampering detected
+
+**Implication:** Developers are aware that users/researchers might try to analyze this code and have implemented active defenses against it.
+
+### Security Testing Impact
+
+**Researchers Cannot:**
+- Attach debuggers to biometric code
+- Modify the app to change behavior
+- Extract running keys or algorithms
+- Hook function calls in native code
+- Intercept biometric processing at runtime
+
+### Purpose
+
+The function names suggest this code serves two purposes:
+1. **Legitimate:** Protect biometric data from unauthorized access
+2. **Questionable:** Prevent security researchers from analyzing functionality
+
+### Risk Assessment
+
+**This Indicates:**
+- Developers anticipated scrutiny
+- Biometric processing deliberately obscured
+- Active prevention of independent verification
+- Prevents transparency about what's collected
+
+### Comparison
+
+| Protection | Purpose | Concern |
+|-----------|---------|---------|
+| Anti-Debugging | Prevent hacking | Legitimate |
+| Anti-Rooting | Prevent modification | Legitimate |
+| Device Integrity Checks | Verify environment | Legitimate |
+| **Research Prevention** | Block analysis | **Concerning** |
+
+### Public Health Significance
+
+Most legitimate security-sensitive applications (banking, healthcare) allow authorized security research and have responsible disclosure programs. The active prevention of analysis suggests:
+- No transparency into biometric handling
+- No way for independent verification
+- Users must trust CBP/iProov/Regula without verification
+- Security through obscurity, not design
+
+### What Would Be Better
+
+**Transparency Approach:**
+- Document exactly what data is collected
+- Allow security audits by independent researchers
+- Publish privacy impact assessment
+- Provide data deletion mechanisms
+- Enable users to verify claims
+
+**Instead:** Active defense against verification attempts
+
+---
+
+## Finding #10: No Malware, Pure Surveillance by Design
 
 <div class="alert alert-info">
 <h4>Classification: NOT Malware</h4>
@@ -397,18 +502,30 @@ This application does **NOT** contain malware. All surveillance capabilities are
 App Launch
     ↓
 Location Services Activated (continuous)
+    ├─ Anti-tampering checks performed
+    └─ Device integrity verified
     ↓
 Device Identifiers Collected
     ↓
 User Opens Document Scanner
+    ├─ Camera access verified
+    └─ Biometric code loaded (protected)
     ↓
 Biometric Face Capture
+    ├─ Liveness detection (iProov)
+    └─ Face protection active
     ↓
 Government ID Scanned
+    ├─ OCR processing
+    └─ Regula APIs called
     ↓
 All Data Transmitted
+    ├─ Encryption layer active
+    └─ Third parties contacted
     ↓
 Remote Config Updated
+    ├─ Firebase connection
+    └─ Behavior can change silently
     ↓
 Telemetry Aggregated
     ↓
@@ -427,16 +544,18 @@ Data Stored Indefinitely
 
 ## Comparison Table: What's Being Collected
 
-| Data Type | Collection | Frequency | Transmission | Storage | Risk |
-|-----------|-----------|-----------|--------------|---------|------|
-| GPS | Automatic | Continuous | Real-time | Indefinite | **CRITICAL** |
-| Biometric | Automatic | As needed | Real-time | Indefinite | **CRITICAL** |
-| Documents | Manual | On-demand | Real-time | Indefinite | **CRITICAL** |
-| Contacts | Automatic | On-demand | Real-time | Indefinite | **CRITICAL** |
-| Call Logs | Automatic | On-demand | Real-time | Indefinite | **CRITICAL** |
-| Device ID | Automatic | Continuous | Real-time | Indefinite | **HIGH** |
-| Activities | Automatic | Continuous | Periodic | Long-term | **HIGH** |
-| Analytics | Automatic | Continuous | Periodic | Long-term | **HIGH** |
+| Data Type | Collection | Frequency | Transmission | Storage | Risk | Protection |
+|-----------|-----------|-----------|--------------|---------|------|-----------|
+| GPS | Automatic | Continuous | Real-time | Indefinite | **CRITICAL** | Encrypted |
+| Biometric | Automatic | As needed | Real-time | Indefinite | **CRITICAL** | **Protected** |
+| Documents | Manual | On-demand | Real-time | Indefinite | **CRITICAL** | Encrypted |
+| Contacts | Automatic | On-demand | Real-time | Indefinite | **CRITICAL** | Encrypted |
+| Call Logs | Automatic | On-demand | Real-time | Indefinite | **CRITICAL** | Encrypted |
+| Device ID | Automatic | Continuous | Real-time | Indefinite | **HIGH** | Encrypted |
+| Activities | Automatic | Continuous | Periodic | Long-term | **HIGH** | Encrypted |
+| Analytics | Automatic | Continuous | Periodic | Long-term | **HIGH** | Encrypted |
+
+**Note:** Biometric code has active anti-tampering protection, making it difficult to verify protection mechanisms
 
 ---
 
@@ -454,6 +573,84 @@ The CBP Home application represents a comprehensive surveillance infrastructure 
 All data flows to multiple external parties (Google, private companies, and government agencies) with limited user control and no meaningful way to opt out.
 
 **Recommendation:** Users concerned with privacy should avoid this application.
+
+---
+
+## Encryption Analysis
+
+### What We Know About Encryption
+
+**Confirmed:**
+- ✅ All network connections use HTTPS/TLS
+- ✅ OKHttp3 HTTP client with TLS 1.2+ support
+- ✅ User-Agent string identifies as OKHttp/4.9.3
+- ✅ Standard HTTPS encryption in transit
+
+**NOT Confirmed:**
+- ❓ Certificate pinning (NOT found in decompiled code)
+- ❓ Data encrypted before transmission (transmission layer only)
+- ❓ Encryption at rest on servers (unknown)
+- ❓ End-to-end encryption (no evidence found)
+
+### Analysis Details
+
+**What This Means:**
+
+Your data is encrypted while in transit from your phone to external servers (HTTPS), but:
+
+1. **No Certificate Pinning**
+   - App doesn't verify SSL certificates strongly
+   - Potential for man-in-the-middle attacks on certain networks
+   - Standard SSL vulnerable to compromise
+
+2. **Only Transit Encryption**
+   - HTTPS only protects data in transmission
+   - Data is decrypted on receiving servers
+   - Servers store decrypted data
+   - Unknown how long it's retained
+
+3. **Server Storage Unknown**
+   - No evidence of encryption at rest
+   - Firebase, Regula, and iProov servers handle decrypted data
+   - Third-party companies' security practices unknown
+
+### Practical Implications
+
+**Protected:** Data in transit between your phone and servers (while on network)
+
+**Not Protected:**
+- Data at rest on servers
+- Data in Firebase systems
+- Data in Regula systems
+- Data in iProov systems
+- Data in government databases
+- Historical data in archives
+
+### Security Assessment
+
+| Encryption Aspect | Status | Risk |
+|------------------|--------|------|
+| Transit Encryption | ✅ HTTPS/TLS | Low |
+| Certificate Pinning | ❌ Not Found | Medium |
+| Pre-transmission Encryption | ❌ No Evidence | High |
+| Server Storage Encryption | ❓ Unknown | **Critical** |
+| End-to-End Encryption | ❌ Not Implemented | **Critical** |
+| Data Retention Encryption | ❓ Unknown | **Critical** |
+
+### What Better Encryption Would Look Like
+
+**End-to-End Encryption:**
+- Data encrypted on your device
+- Only your device can decrypt it
+- Servers receive encrypted data
+- Even server administrators can't read it
+- Third parties cannot decrypt even if they receive it
+
+**Current Implementation:**
+- Data decrypted on servers
+- Server administrators can read everything
+- Third parties receive decrypted data
+- Historical data stored indefinitely in plaintext (likely)
 
 ---
 

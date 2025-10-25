@@ -414,6 +414,141 @@ MEDIUM (6/10)
 
 ---
 
+## Native Code Capabilities (Beyond Java Permissions)
+
+### Additional Capabilities from Native Libraries
+
+The application includes **9 native ARM libraries** (~134MB) that provide additional functionality not directly controlled by Android permissions. These native components include:
+
+#### 1. Biometric Processing (libiproov-com-calcifer-lib.so + libiproov-com-lib.so)
+
+**Capabilities Enabled:**
+- Facial liveness detection (detects spoofing attempts)
+- Biometric encryption (encrypts face data before transmission)
+- Anti-spoofing measures (detects masks, photos, deepfakes)
+- Replay attack prevention (prevents recording/replaying data)
+- Session integrity checking
+
+**Risks:**
+- Biometric data processed in protected native code
+- Anti-tampering prevents verification of encryption
+- Cannot be disabled via Android permissions
+
+#### 2. ML Inference Pipeline (libAndroidSdk.so)
+
+**ML Framework:** ONNX Runtime with multiple backends
+
+**Supported Acceleration:**
+- NVIDIA GPU (TensorRT)
+- Intel Deep Neural Networks (DNNL)
+- AMD GPU (ROCm)
+- Various other accelerators
+
+**Models Likely Running:**
+- Document recognition/OCR
+- Facial feature extraction
+- Liveness detection quality assessment
+- Image quality evaluation
+
+**Privacy Impact:**
+- Local ML processing with unknown models
+- Models optimized for biometric accuracy
+- Potential enhancement of facial data
+
+#### 3. Document Scanner (libAndroidSdk.so integration with Regula)
+
+**Capabilities:**
+- Infrared frame processing (PROCESS_IR_FRAME)
+- RFID detection capability
+- Document alignment tracking
+- Document quality assessment
+- Optical Character Recognition (OCR)
+
+**Risk:**
+- Extended document scanning beyond visible camera
+- RFID capabilities enable passport/ID reading
+- No user visibility into what's being scanned
+
+#### 4. Device Security Integration (libgdsxhfc.so)
+
+**Google Device Security Functions:**
+- Device integrity verification (SafetyNet/Play Integrity)
+- App certificate validation
+- Installation source verification
+- Tampering detection and reporting
+
+**Risk:**
+- Google receives device security status
+- Can verify that device is legitimate
+- Reports tampering attempts to Google
+
+#### 5. Anti-Tampering & Anti-Debugging (libiproov-com-calcifer-lib.so)
+
+**Detection Capabilities:**
+- APK debuggable flag checking
+- Android Debug Bridge (ADB) detection
+- Superuser/root detection
+- SELinux security status querying
+- Rooting tool detection (Magisk, Xposed, LSPosed)
+- Process memory inspection monitoring
+
+**What This Prevents:**
+- Security researchers cannot debug the app
+- App refuses to run on rooted devices
+- Prevents modification of app behavior
+- Stops analysis of biometric code
+
+**Implication:** Users cannot independently verify what the biometric code does
+
+---
+
+## Comparing Java Permissions vs. Native Capabilities
+
+| Capability | Java Permission | Native Code | User Control |
+|-----------|-----------------|------------|--------------|
+| Location Tracking | ACCESS_FINE_LOCATION | ✓ | Can deny |
+| Camera Access | CAMERA | ✓ | Can deny |
+| Biometric Protection | (none) | ✓ iProov | **Cannot control** |
+| ML Processing | (none) | ✓ ONNX | **Cannot control** |
+| RFID Reading | (none) | ✓ | **Cannot control** |
+| Anti-Tampering | (none) | ✓ | **Cannot control** |
+| Device Integrity Check | (none) | ✓ | **Cannot control** |
+
+**Key Issue:** Native code capabilities exist beyond Android permissions and cannot be disabled
+
+---
+
+## How Native Code Affects Privacy
+
+### Java Code (Manageable)
+- Android permissions control access
+- Users can deny permissions
+- Functionality limited without permissions
+
+### Native Code (Not Manageable)
+- No permission model for native features
+- Always active and enabled
+- Cannot be disabled by user
+- Harder to audit and understand
+
+### Example Scenario
+
+```
+User denies READ_CALL_LOG permission
+    ✓ Java code cannot access call history
+
+But native code still runs:
+    - Anti-tampering checks active
+    - Device integrity verified
+    - Biometric processing protected
+    - ML models running
+    - RFID detection available
+```
+
+Users think they've revoked permissions, but native functionality continues
+
+---
+
 ## Comparing Permission Requests
 
 ### CBP Home vs. Other Apps

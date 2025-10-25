@@ -1224,6 +1224,120 @@ Linked to other crimes or organizations
 
 ---
 
+## Risk Category 9: Weak Encryption & Data Exposure
+
+<span style="display: inline-block; background-color: rgb(239, 68, 68); color: white; padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: 700; margin-bottom: 1rem;">HIGH: Limited Encryption Protection</span>
+
+### The Risk
+
+Data encryption is limited to transmission only. Once received by servers, data is stored unencrypted and accessible to administrators, third parties, and potentially compromised systems.
+
+### What We Found
+
+**Confirmed:**
+- ✅ HTTPS/TLS encryption for transmission
+- ✅ OKHttp3 with modern SSL/TLS support
+
+**NOT Found:**
+- ❌ Certificate pinning (weak SSL verification)
+- ❌ Pre-transmission encryption
+- ❌ End-to-end encryption
+- ❌ Evidence of encryption at rest
+
+### Data Exposure Points
+
+```
+Your Device (Encrypted)
+    ↓
+Network (Encrypted via HTTPS)
+    ↓
+Server Reception (Decrypted)
+    ↓
+Server Storage (Unencrypted - likely)
+    ↓
+Server Administrators Can Read
+    ↓
+Third Parties Can Read
+    ↓
+Backup Systems (Unencrypted - likely)
+    ↓
+Indefinite Exposure
+```
+
+### Specific Vulnerabilities
+
+**1. No Certificate Pinning**
+- App doesn't validate specific certificates
+- Could be intercepted with forged certificates
+- Man-in-the-middle attacks possible
+- Compromised network infrastructure risk
+
+**2. Decrypted Server Storage**
+- Servers store all data in plaintext
+- Firebase administrators can read all data
+- Regula administrators can read all data
+- iProov administrators can read all data
+- Backup administrators can read all data
+
+**3. Third-Party Access**
+- Google receives unencrypted analytics
+- Regula receives unencrypted biometrics
+- iProov receives unencrypted faces
+- Government receives unencrypted aggregates
+
+### Impact Scenarios
+
+**Scenario 1: Server Breach**
+```
+Attacker breaches Regula servers
+    ↓
+Accesses unencrypted biometric data
+    ↓
+Millions of facial images exposed
+    ↓
+Used for identity theft, deepfakes, fraud
+```
+
+**Scenario 2: Insider Threat**
+```
+Disgruntled employee at Firebase
+    ↓
+Accesses unencrypted location/contact data
+    ↓
+Sells data to criminals/competitors
+    ↓
+Personal information monetized
+```
+
+**Scenario 3: Government Access**
+```
+Government subpoenas third-party servers
+    ↓
+Receives unencrypted personal data
+    ↓
+Uses for targeted surveillance/prosecution
+    ↓
+No user notification or recourse
+```
+
+### Comparison: What Real Encryption Looks Like
+
+**Without Proper Encryption (Current):**
+- Data transmitted encrypted (HTTPS)
+- Data received and decrypted
+- Data stored in plaintext on servers
+- Multiple parties can read data
+- Permanent exposure
+
+**With End-to-End Encryption (Better):**
+- Data encrypted on your device
+- Only encrypted version sent to server
+- Server cannot decrypt even if wanted to
+- Only your device can decrypt
+- Third parties never see plaintext
+
+---
+
 ## Risk Category 10: Chilling Effect
 
 <div class="alert alert-warning">

@@ -83,6 +83,21 @@ The app includes **Firebase Remote Configuration** that allows Google (and CBP) 
 
 ---
 
+## Encryption Status
+
+**In Transit:** ✅ HTTPS/TLS encryption
+**At Rest:** ❓ Unknown (likely unencrypted)
+**End-to-End:** ❌ Not implemented
+
+**What This Means:**
+- Your data is encrypted while traveling to servers
+- But servers store it in decrypted form
+- Third parties (Regula, iProov, Google) receive unencrypted data
+- No certificate pinning found (weak SSL verification)
+- Permanent exposure to third parties
+
+---
+
 ## Critical Features
 
 <div class="space-y-3 my-8">
